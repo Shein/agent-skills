@@ -1,0 +1,44 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+*.whl
+.venv/
+venv/
+env/
+
+# === Playwright / Browser profiles ===
+.toast_browser_profile/
+*_browser_profile/
+
+# === Environment & secrets ===
+.env
+.env.*
+*.pem
+*.key
+
+# === macOS ===
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# === IDE / Editor ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# === Logs & debug artifacts ===
+*.log
+*.jsonl
+
+# === Misc ===
+*.tmp
+*.bak
