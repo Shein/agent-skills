@@ -1000,11 +1000,39 @@ async def wait_for_order_detail_blocks_ready(page: Page, config: dict[str, Any],
         await asyncio.sleep(0.5)
 
 
+async def get_pagination_summary(page: Page) -> dict[str, int]:
+    """Read the LAST .pagination-summary span and parse 'Showing x through y of z'.
+
+    Returns ``{"start": x, "end": y, "total": z}`` or an empty dict when the
+    element is absent or the text doesn't match the expected pattern.
+    """
+    try:
+        info = await page.evaluate(
+            """() => {
+                const spans = Array.from(document.querySelectorAll('.pagination-summary'));
+                if (!spans.length) return null;
+                const last = spans[spans.length - 1];
+                const text = (last.textContent || '').trim();
+                const m = text.match(/Showing\\s+(\\d+)\\s+through\\s+(\\d+)\\s+of\\s+(\\d+)/i);
+                if (!m) return null;
+                return { start: parseInt(m[1], 10), end: parseInt(m[2], 10), total: parseInt(m[3], 10) };
+            }"""
+        )
+        return info if isinstance(info, dict) else {}
+    except Exception:
+        return {}
+
+
 async def click_next_order_details_page(page: Page, config: dict[str, Any]) -> bool:
-    selectors = config.get("order_details", {}).get("order_next_button", [])
+    """Click 'Next' in the LAST .pagination div on the page.
+
+    The order-details page contains multiple ``.pagination`` divs (the first
+    ones belong to the menu-item-summary table).  We always target the last
+    one so that we paginate the *orders* table.
+    """
     try:
         clicked = await page.evaluate(
-            """(candidateSelectors) => {
+            """() => {
                 const isVisible = (el) => {
                     if (!el) return false;
                     const r = el.getBoundingClientRect();
@@ -1014,30 +1042,54 @@ async def click_next_order_details_page(page: Page, config: dict[str, Any]) -> b
                     if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') return false;
                     return true;
                 };
-                for (const selector of candidateSelectors || []) {
-                    const nodes = Array.from(document.querySelectorAll(selector));
-                    for (const node of nodes) {
-                        if (!isVisible(node)) continue;
-                        const ariaDisabled = (node.getAttribute('aria-disabled') || '').toLowerCase() === 'true';
-                        const disabledAttr = node.getAttribute('disabled') != null;
-                        const className = (node.getAttribute('class') || '').toLowerCase();
-                        const parentClass = (node.parentElement?.getAttribute('class') || '').toLowerCase();
-                        if (ariaDisabled || disabledAttr) continue;
-                        if (className.includes('disabled') || parentClass.includes('disabled')) continue;
-                        node.click();
-                        return true;
-                    }
-                }
-                return false;
-            }""",
-            selectors,
+                const paginationDivs = Array.from(document.querySelectorAll('.pagination'));
+                if (!paginationDivs.length) return false;
+                const lastPagination = paginationDivs[paginationDivs.length - 1];
+                const nextLi = lastPagination.querySelector('li.next');
+                if (!nextLi) return false;
+                const className = (nextLi.getAttribute('class') || '').toLowerCase();
+                if (className.includes('disabled')) return false;
+                const anchor = nextLi.querySelector('a');
+                if (!anchor || !isVisible(anchor)) return false;
+                anchor.click();
+                return true;
+            }"""
         )
-        if clicked:
-            await page.wait_for_timeout(900)
-            return True
+        return bool(clicked)
     except Exception:
         pass
     return False
+
+
+async def wait_for_pagination_change(
+    page: Page,
+    old_summary: dict[str, int],
+    timeout_sec: int = 30,
+) -> dict[str, int]:
+    """Poll until the pagination-summary text changes from *old_summary*.
+
+    After clicking 'Next', Toast replaces the order-detail blocks
+    asynchronously.  This helper watches the LAST ``.pagination-summary``
+    span until its ``start``/``end`` values differ from *old_summary*,
+    indicating the new page has loaded.
+
+    Returns the new summary dict, or the old one on timeout.
+    """
+    deadline = asyncio.get_event_loop().time() + max(1, timeout_sec)
+    while asyncio.get_event_loop().time() < deadline:
+        await asyncio.sleep(0.5)
+        # Also wait for loading spinners to clear.
+        await wait_for_order_details_idle(page, timeout_sec=5)
+        new_summary = await get_pagination_summary(page)
+        if not new_summary:
+            continue
+        # The page has changed when start or end differs.
+        if (
+            new_summary.get("start") != old_summary.get("start")
+            or new_summary.get("end") != old_summary.get("end")
+        ):
+            return new_summary
+    return old_summary
 
 
 async def extract_order_detail_blocks(page: Page, config: dict[str, Any]) -> list[dict[str, Any]]:
@@ -2261,12 +2313,17 @@ async def crawl_metadata(
                 break
             page_signatures.add(signature)
 
+        # Read the pagination summary *after* extracting the current page so
+        # we can detect when the next page has finished loading.
+        current_summary = await get_pagination_summary(page)
+
         log_event(
             "order_details_page_fetched",
             page=page_count,
             rows=len(raw_rows),
             accepted=len(all_rows),
             page_added=page_added,
+            pagination=current_summary or None,
         )
 
         if limit and len(all_rows) >= limit:
@@ -2284,13 +2341,59 @@ async def crawl_metadata(
             break
         if not raw_rows:
             break
+
+        # Check whether there are more pages via the pagination summary.
+        if current_summary:
+            if current_summary.get("end", 0) >= current_summary.get("total", 0):
+                log_event(
+                    "order_details_pagination_complete",
+                    page=page_count,
+                    collected=len(all_rows),
+                    total=current_summary.get("total"),
+                )
+                break
+
         if not await click_next_order_details_page(page, config):
             break
+
+        # Wait for the DOM to reflect the new page data instead of relying on
+        # a fixed timeout.  The pagination-summary text will change once the
+        # server response is rendered.
+        if current_summary:
+            await wait_for_pagination_change(page, current_summary, timeout_sec=30)
+        else:
+            # Fallback: no summary available, use heuristic idle wait.
+            await human_pause(
+                page,
+                min_ms=max(400, human_min_delay_ms),
+                max_ms=max(1200, human_max_delay_ms),
+                label="order_details_page_pause",
+            )
+            await wait_for_order_details_idle(page, timeout_sec=15)
+
         await human_pause(
             page,
             min_ms=max(400, human_min_delay_ms),
             max_ms=max(1200, human_max_delay_ms),
             label="order_details_page_pause",
+        )
+
+    # Final verification: compare collected checks against the pagination total.
+    final_summary = await get_pagination_summary(page)
+    expected_total = final_summary.get("total", 0) if final_summary else 0
+    collected = len(all_rows)
+    if expected_total and collected != expected_total:
+        log_event(
+            "order_details_pagination_mismatch",
+            collected=collected,
+            expected=expected_total,
+            pagination=final_summary,
+        )
+    elif expected_total:
+        log_event(
+            "order_details_pagination_verified",
+            collected=collected,
+            expected=expected_total,
         )
 
     return all_rows
