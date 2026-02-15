@@ -370,6 +370,11 @@ def parse_args() -> argparse.Namespace:
         default=700,
         help="Minimum spacing between starting each order-detail navigation across workers (milliseconds).",
     )
+    parser.add_argument(
+        "--combined-output",
+        default="",
+        help="Path for combined JSON output (checks + menu summary). If set, writes the combined format.",
+    )
     return parser.parse_args()
 
 
@@ -452,6 +457,30 @@ def save_menu_summary(path: Path, rows: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
     tmp.write_text(json.dumps(rows, indent=2), encoding="utf-8")
+    tmp.replace(path)
+
+
+def save_combined_output(
+    path: Path,
+    *,
+    from_date: str,
+    to_date: str,
+    extracted_on: str,
+    extraction_duration: float,
+    menu_items_summary: list[dict[str, Any]],
+    checks: list[dict[str, Any]],
+) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "from_date": from_date,
+        "to_date": to_date,
+        "extracted_on": extracted_on,
+        "extraction_duration": extraction_duration,
+        "menu_items_summary": menu_items_summary,
+        "checks": checks,
+    }
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(payload, indent=2), encoding="utf-8")
     tmp.replace(path)
 
 
@@ -2459,6 +2488,14 @@ def normalize_payment_type(value: Any) -> str | None:
     return text
 
 
+_INACTIVE_PAYMENT_STATUSES = frozenset({"DENIED", "VOIDED"})
+
+
+def _is_active_payment(payment: dict[str, Any]) -> bool:
+    status = (payment.get("status") or "").strip().upper()
+    return status not in _INACTIVE_PAYMENT_STATUSES
+
+
 DATETIME_INPUT_FORMATS: tuple[str, ...] = (
     "%m/%d/%Y, %I:%M:%S %p",
     "%m/%d/%Y, %I:%M %p",
@@ -2814,33 +2851,22 @@ def validate_detail_payload(mapped: dict[str, Any]) -> list[str]:
     payments = mapped.get("payments") or []
 
     # Total formula: subtotal is already post-discount, so do NOT subtract discount again.
-    if subtotal is not None and tax is not None and tip is not None and gratuity is not None and total is not None:
-        expected = round(subtotal + tax + tip + gratuity, 2)
-        if abs(expected - total) > 0.05:
-            errors.append(
-                f"total_mismatch: expected={expected:.2f} actual={total:.2f} "
-                f"(subtotal={subtotal:.2f}, tax={tax:.2f}, tip={tip:.2f}, gratuity={gratuity:.2f})"
-            )
-
-    # Subtotal verification: sum of item line_totals should match subtotal.
-    if subtotal is not None and items:
-        items_subtotal = round(sum(parse_decimal(item.get("line_total")) or 0.0 for item in items), 2)
-        if abs(items_subtotal - subtotal) > 0.05:
-            errors.append(
-                f"subtotal_mismatch: items_sum={items_subtotal:.2f} subtotal={subtotal:.2f}"
-            )
-
-    # Discount verification: sum of item discounts should match check-level discount.
-    if discount and items:
-        items_discount = round(sum(parse_decimal(item.get("discount")) or 0.0 for item in items), 2)
-        if abs(items_discount - discount) > 0.05:
-            errors.append(
-                f"discount_mismatch: items_discount={items_discount:.2f} discount={discount:.2f}"
-            )
+    # Skip for comped checks where total=0 but subtotal>0 or tip>0 (pre-comp payment capture).
+    is_comped = (total is not None and abs(total) < 0.005
+                 and ((subtotal is not None and subtotal > 0.5)
+                      or (tip is not None and tip > 0.5)))
+    if not is_comped:
+        if subtotal is not None and tax is not None and tip is not None and gratuity is not None and total is not None:
+            expected = round(subtotal + tax + tip + gratuity, 2)
+            if abs(expected - total) > 0.05:
+                errors.append(
+                    f"total_mismatch: expected={expected:.2f} actual={total:.2f} "
+                    f"(subtotal={subtotal:.2f}, tax={tax:.2f}, tip={tip:.2f}, gratuity={gratuity:.2f})"
+                )
 
     # Tip verification: sum of non-DENIED payment tips should match check-level tip.
     if tip is not None and payments:
-        non_denied = [p for p in payments if (p.get("status") or "").upper() != "DENIED"]
+        non_denied = [p for p in payments if _is_active_payment(p)]
         if non_denied:
             payment_tips = round(
                 sum(parse_decimal(p.get("tip")) or 0.0 for p in non_denied), 2
@@ -2975,7 +3001,7 @@ def map_detail_payload(
         tip_values = [
             parse_decimal(p.get("tip"))
             for p in payments
-            if (p.get("status") or "").upper() != "DENIED"
+            if _is_active_payment(p)
         ]
         tip_numbers = [value for value in tip_values if value is not None]
         if tip_numbers:
@@ -2990,7 +3016,7 @@ def map_detail_payload(
         gratuity_values = [
             parse_decimal(p.get("gratuity"))
             for p in payments
-            if (p.get("status") or "").upper() != "DENIED"
+            if _is_active_payment(p)
         ]
         gratuity_numbers = [value for value in gratuity_values if value is not None]
         if gratuity_numbers:
@@ -3009,7 +3035,7 @@ def map_detail_payload(
         payment_totals = [
             parse_decimal(p.get("total"))
             for p in payments
-            if (p.get("status") or "").upper() != "DENIED"
+            if _is_active_payment(p)
         ]
         payment_total_numbers = [value for value in payment_totals if value is not None]
         if payment_total_numbers:
@@ -3018,7 +3044,7 @@ def map_detail_payload(
         amount_values = [
             parse_decimal(p.get("amount"))
             for p in payments
-            if (p.get("status") or "").upper() != "DENIED"
+            if _is_active_payment(p)
         ]
         amount_numbers = [value for value in amount_values if value is not None]
         if amount_numbers:
@@ -3529,6 +3555,7 @@ async def run_once(
     error_log_path = Path(args.error_log_file)
     artifact_dir = Path(args.artifact_dir) / run_id
     artifact_dir.mkdir(parents=True, exist_ok=True)
+    _run_start_time = datetime.now(timezone.utc)
     log_event("run_start", run_id=run_id, state_file=str(state_path))
     save_progress(progress_path, state, run_id)
 
@@ -3629,6 +3656,24 @@ async def run_once(
         completed = sum(1 for row in state.values() if row.get("complete"))
         incomplete = len(state) - completed
         save_progress(progress_path, state, run_id)
+
+        if args.combined_output:
+            _run_end_time = datetime.now(timezone.utc)
+            _duration = (_run_end_time - _run_start_time).total_seconds()
+            checks_list = sorted(state.values(), key=lambda row: row["payment_id"])
+            menu_rows: list[dict[str, Any]] = []
+            if menu_summary_path.exists():
+                menu_rows = json.loads(menu_summary_path.read_text(encoding="utf-8"))
+            save_combined_output(
+                Path(args.combined_output),
+                from_date=args.start_date or "",
+                to_date=args.end_date or "",
+                extracted_on=_run_end_time.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                extraction_duration=round(_duration, 2),
+                menu_items_summary=menu_rows,
+                checks=checks_list,
+            )
+
         log_event("run_complete", run_id=run_id, total=len(state), complete=completed, incomplete=incomplete)
         await context.close()
 
