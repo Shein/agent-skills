@@ -1156,6 +1156,22 @@ async def extract_order_detail_blocks(page: Page, config: dict[str, Any]) -> lis
                     total: byClassText(".check-total"),
                 };
 
+                // Fallback: extract tip/total/gratuity from <b> label divs
+                // when CSS class selectors return empty.
+                if (!summary.tip || !summary.total || !summary.gratuity) {
+                    for (const bold of Array.from(order.querySelectorAll("div.span2 b"))) {
+                        const label = normalize(bold.textContent).replace(/:$/, "").toLowerCase();
+                        const parentDiv = bold.closest("div.span2");
+                        const siblingDiv = parentDiv ? parentDiv.nextElementSibling : null;
+                        if (!siblingDiv) continue;
+                        const val = normalize(siblingDiv.textContent);
+                        if (!val) continue;
+                        if (label === "tip" && !summary.tip) summary.tip = val;
+                        if (label === "total" && !summary.total) summary.total = val;
+                        if (label === "gratuity" && !summary.gratuity) summary.gratuity = val;
+                    }
+                }
+
                 const summaryDetails = {};
                 const detailsBlock = order.querySelector(".check-server-details");
                 if (detailsBlock) {
@@ -1195,6 +1211,7 @@ async def extract_order_detail_blocks(page: Page, config: dict[str, Any]) -> lis
                         summaryDetails.server = byLabel["opened by server"];
                     }
                     if (byLabel["table"]) summaryDetails.table = byLabel["table"];
+                    if (byLabel["tab name"]) summaryDetails.tab_name = byLabel["tab name"];
                     if (!summaryDetails.time_opened && lines.length > 0) {
                         summaryDetails.time_opened = lines[0];
                     }
@@ -2793,16 +2810,48 @@ def validate_detail_payload(mapped: dict[str, Any]) -> list[str]:
     gratuity = parse_decimal(mapped.get("gratuity"))
     discount = parse_decimal(mapped.get("discount")) or 0.0
     total = parse_decimal(mapped.get("total"))
+    items = mapped.get("items") or []
+    payments = mapped.get("payments") or []
 
+    # Total formula: subtotal is already post-discount, so do NOT subtract discount again.
     if subtotal is not None and tax is not None and tip is not None and gratuity is not None and total is not None:
-        expected = round(subtotal + tax + tip + gratuity - discount, 2)
+        expected = round(subtotal + tax + tip + gratuity, 2)
         if abs(expected - total) > 0.05:
             errors.append(
                 f"total_mismatch: expected={expected:.2f} actual={total:.2f} "
-                f"(subtotal={subtotal:.2f}, tax={tax:.2f}, tip={tip:.2f}, gratuity={gratuity:.2f}, discount={discount:.2f})"
+                f"(subtotal={subtotal:.2f}, tax={tax:.2f}, tip={tip:.2f}, gratuity={gratuity:.2f})"
             )
 
-    for idx, item in enumerate(mapped.get("items") or []):
+    # Subtotal verification: sum of item line_totals should match subtotal.
+    if subtotal is not None and items:
+        items_subtotal = round(sum(parse_decimal(item.get("line_total")) or 0.0 for item in items), 2)
+        if abs(items_subtotal - subtotal) > 0.05:
+            errors.append(
+                f"subtotal_mismatch: items_sum={items_subtotal:.2f} subtotal={subtotal:.2f}"
+            )
+
+    # Discount verification: sum of item discounts should match check-level discount.
+    if discount and items:
+        items_discount = round(sum(parse_decimal(item.get("discount")) or 0.0 for item in items), 2)
+        if abs(items_discount - discount) > 0.05:
+            errors.append(
+                f"discount_mismatch: items_discount={items_discount:.2f} discount={discount:.2f}"
+            )
+
+    # Tip verification: sum of non-DENIED payment tips should match check-level tip.
+    if tip is not None and payments:
+        non_denied = [p for p in payments if (p.get("status") or "").upper() != "DENIED"]
+        if non_denied:
+            payment_tips = round(
+                sum(parse_decimal(p.get("tip")) or 0.0 for p in non_denied), 2
+            )
+            if abs(payment_tips - tip) > 0.05:
+                errors.append(
+                    f"tip_mismatch: payment_tips={payment_tips:.2f} tip={tip:.2f}"
+                )
+
+    # Per-item line total validation.
+    for idx, item in enumerate(items):
         quantity = parse_decimal(item.get("quantity"))
         unit_price = parse_decimal(item.get("unit_price"))
         line_total = parse_decimal(item.get("line_total"))
@@ -2923,7 +2972,11 @@ def map_detail_payload(
 
     tip = parse_decimal(summary.get("tip"))
     if tip is None and payments:
-        tip_values = [parse_decimal(payment.get("tip")) for payment in payments]
+        tip_values = [
+            parse_decimal(p.get("tip"))
+            for p in payments
+            if (p.get("status") or "").upper() != "DENIED"
+        ]
         tip_numbers = [value for value in tip_values if value is not None]
         if tip_numbers:
             tip = round(sum(tip_numbers), 2)
@@ -2934,7 +2987,11 @@ def map_detail_payload(
 
     gratuity = parse_decimal(summary.get("gratuity"))
     if gratuity is None and payments:
-        gratuity_values = [parse_decimal(payment.get("gratuity")) for payment in payments]
+        gratuity_values = [
+            parse_decimal(p.get("gratuity"))
+            for p in payments
+            if (p.get("status") or "").upper() != "DENIED"
+        ]
         gratuity_numbers = [value for value in gratuity_values if value is not None]
         if gratuity_numbers:
             gratuity = round(sum(gratuity_numbers), 2)
@@ -2949,12 +3006,20 @@ def map_detail_payload(
     if total is None:
         total = parse_decimal(pick_metadata_value(metadata, ["total"]))
     if total is None and payments:
-        payment_totals = [parse_decimal(payment.get("total")) for payment in payments]
+        payment_totals = [
+            parse_decimal(p.get("total"))
+            for p in payments
+            if (p.get("status") or "").upper() != "DENIED"
+        ]
         payment_total_numbers = [value for value in payment_totals if value is not None]
         if payment_total_numbers:
             total = round(sum(payment_total_numbers), 2)
     if total is None and payments:
-        amount_values = [parse_decimal(payment.get("amount")) for payment in payments]
+        amount_values = [
+            parse_decimal(p.get("amount"))
+            for p in payments
+            if (p.get("status") or "").upper() != "DENIED"
+        ]
         amount_numbers = [value for value in amount_values if value is not None]
         if amount_numbers:
             tip_component = tip or 0.0
@@ -3007,6 +3072,7 @@ def map_detail_payload(
             or regex_server
         ),
         "table": pick_value(pairs, ["table", "tab"]) or summary_details.get("table") or regex_table,
+        "tab_name": summary_details.get("tab_name") or pick_value(pairs, ["tab name"]),
         "discount": discount,
         "discounts": discounts_table,
         "subtotal": subtotal,
@@ -3156,6 +3222,22 @@ async def extract_detail_payload(
                 total: byClassText(".check-total"),
             };
 
+            // Fallback: extract tip/total/gratuity from <b> label divs
+            // when CSS class selectors return empty.
+            if (!summary.tip || !summary.total || !summary.gratuity) {
+                for (const bold of Array.from(document.querySelectorAll("div.span2 b"))) {
+                    const label = (bold.textContent || "").trim().replace(/:$/, "").toLowerCase();
+                    const parentDiv = bold.closest("div.span2");
+                    const siblingDiv = parentDiv ? parentDiv.nextElementSibling : null;
+                    if (!siblingDiv) continue;
+                    const val = (siblingDiv.textContent || "").trim();
+                    if (!val) continue;
+                    if (label === "tip" && !summary.tip) summary.tip = val;
+                    if (label === "total" && !summary.total) summary.total = val;
+                    if (label === "gratuity" && !summary.gratuity) summary.gratuity = val;
+                }
+            }
+
             const summaryDetails = {};
             const detailsBlock = document.querySelector(".check-server-details");
             if (detailsBlock) {
@@ -3163,9 +3245,44 @@ async def extract_detail_payload(
                     .split(/\\n+/)
                     .map((line) => line.trim())
                     .filter(Boolean);
-                if (lines.length > 0) summaryDetails.time_opened = lines[0];
-                if (lines.length > 1) summaryDetails.server = lines[1];
-                if (lines.length > 4) summaryDetails.table = lines[lines.length - 2];
+                // Label-based parsing for server details
+                const labelBlock = detailsBlock.previousElementSibling;
+                const labels = [];
+                if (labelBlock) {
+                    for (const el of Array.from(labelBlock.querySelectorAll("b"))) {
+                        const label = (el.textContent || "").trim().replace(/:$/, "").toLowerCase();
+                        if (label) labels.push(label);
+                    }
+                }
+                const byLabel = {};
+                let labelIndex = 0;
+                let lastLabel = "";
+                for (const line of lines) {
+                    const isContinuation = line.startsWith("(") && lastLabel;
+                    if (isContinuation) {
+                        byLabel[lastLabel] = `${byLabel[lastLabel]} ${line}`.trim();
+                        continue;
+                    }
+                    if (labelIndex < labels.length) {
+                        const label = labels[labelIndex];
+                        byLabel[label] = line;
+                        lastLabel = label;
+                        labelIndex += 1;
+                    } else if (lastLabel) {
+                        byLabel[lastLabel] = `${byLabel[lastLabel]} ${line}`.trim();
+                    }
+                }
+                if (byLabel["time opened"]) summaryDetails.time_opened = byLabel["time opened"];
+                if (byLabel["server"]) summaryDetails.server = byLabel["server"];
+                if (!summaryDetails.server && byLabel["opened by server"]) {
+                    summaryDetails.server = byLabel["opened by server"];
+                }
+                if (byLabel["table"]) summaryDetails.table = byLabel["table"];
+                if (byLabel["tab name"]) summaryDetails.tab_name = byLabel["tab name"];
+                // Positional fallbacks
+                if (!summaryDetails.time_opened && lines.length > 0) summaryDetails.time_opened = lines[0];
+                if (!summaryDetails.server && lines.length > 1) summaryDetails.server = lines[1];
+                if (!summaryDetails.table && lines.length > 4) summaryDetails.table = lines[lines.length - 2];
             }
 
             const guestInput = document.querySelector("#num-guests");
