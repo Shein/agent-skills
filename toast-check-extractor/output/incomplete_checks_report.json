@@ -1,0 +1,1990 @@
+{
+  "resolved_25": [
+    {
+      "date": "2025-01-10",
+      "payment_id": "200000049957622640",
+      "error": "total_mismatch: expected=551.33 actual=511.63 (subtotal=397.00, tax=35.23, tip=119.10, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-01-14",
+      "payment_id": "200000050089239604",
+      "error": "total_mismatch: expected=1551.29 actual=1342.89 (subtotal=1042.00, tax=92.49, tip=416.80, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-02-15",
+      "payment_id": "200000051178744907",
+      "error": "total_mismatch: expected=223.33 actual=185.08 (subtotal=170.00, tax=15.08, tip=38.25, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-03-21",
+      "payment_id": "200000052476821159",
+      "error": "total_mismatch: expected=1200.00 actual=0.00 (subtotal=0.00, tax=0.00, tip=0.00, gratuity=1200.00)",
+      "category": "comped_gratuity",
+      "cancelled_payments": 0
+    },
+    {
+      "date": "2025-04-08",
+      "payment_id": "200000053253130759",
+      "error": "total_mismatch: expected=348.30 actual=320.74 (subtotal=245.00, tax=21.74, tip=81.56, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-05-11",
+      "payment_id": "200000054666561550",
+      "error": "total_mismatch: expected=287.05 actual=245.43 (subtotal=185.00, tax=16.43, tip=85.62, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-05-24",
+      "payment_id": "200000055215504218",
+      "error": "total_mismatch: expected=24.00 actual=0.00 (subtotal=0.00, tax=0.00, tip=0.00, gratuity=24.00)",
+      "category": "comped_gratuity",
+      "cancelled_payments": 0
+    },
+    {
+      "date": "2025-05-30",
+      "payment_id": "200000055457539736",
+      "error": "total_mismatch: expected=1111.10 actual=963.50 (subtotal=738.00, tax=65.50, tip=307.60, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-06-20",
+      "payment_id": "200000056353749496",
+      "error": "total_mismatch: expected=232.70 actual=198.50 (subtotal=152.00, tax=13.50, tip=67.20, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-06-20",
+      "payment_id": "200000056355921053",
+      "error": "total_mismatch: expected=313.48 actual=288.62 (subtotal=221.00, tax=19.62, tip=72.86, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-06-21",
+      "payment_id": "200000056401961938",
+      "error": "total_mismatch: expected=498.88 actual=420.38 (subtotal=314.00, tax=27.88, tip=157.00, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-06-26",
+      "payment_id": "200000056579677670",
+      "error": "total_mismatch: expected=237.57 actual=202.02 (subtotal=158.00, tax=14.02, tip=65.55, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-06-26",
+      "payment_id": "200000056600658536",
+      "error": "total_mismatch: expected=290.68 actual=248.60 (subtotal=187.00, tax=16.60, tip=87.08, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-06-28",
+      "payment_id": "200000056698522936",
+      "error": "total_mismatch: expected=274.55 actual=238.15 (subtotal=182.00, tax=16.15, tip=76.40, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-07-07",
+      "payment_id": "200000057065695932",
+      "error": "total_mismatch: expected=370.04 actual=314.04 (subtotal=237.00, tax=21.04, tip=112.00, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-07-31",
+      "payment_id": "200000058033523488",
+      "error": "total_mismatch: expected=135.40 actual=0.00 (subtotal=0.00, tax=0.00, tip=0.00, gratuity=135.40)",
+      "category": "comped_gratuity",
+      "cancelled_payments": 0
+    },
+    {
+      "date": "2025-08-15",
+      "payment_id": "200000058643797774",
+      "error": "total_mismatch: expected=164.88 actual=140.58 (subtotal=108.00, tax=9.58, tip=47.30, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-08-31",
+      "payment_id": "200000059274852697",
+      "error": "total_mismatch: expected=859.19 actual=0.00 (subtotal=0.00, tax=0.00, tip=0.00, gratuity=859.19)",
+      "category": "comped_gratuity",
+      "cancelled_payments": 0
+    },
+    {
+      "date": "2025-09-03",
+      "payment_id": "200000059392903441",
+      "error": "total_mismatch: expected=2275.00 actual=0.00 (subtotal=0.00, tax=0.00, tip=0.00, gratuity=2275.00)",
+      "category": "comped_gratuity",
+      "cancelled_payments": 0
+    },
+    {
+      "date": "2025-09-13",
+      "payment_id": "200000059800900398",
+      "error": "total_mismatch: expected=96.77 actual=83.77 (subtotal=65.00, tax=5.77, tip=26.00, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-09-14",
+      "payment_id": "200000059839218494",
+      "error": "total_mismatch: expected=210.18 actual=170.93 (subtotal=157.00, tax=13.93, tip=39.25, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-09-30",
+      "payment_id": "200000060426490029",
+      "error": "total_mismatch: expected=293.29 actual=253.89 (subtotal=197.00, tax=17.49, tip=78.80, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-10-04",
+      "payment_id": "200000060602436189",
+      "error": "total_mismatch: expected=349.54 actual=294.54 (subtotal=220.00, tax=19.54, tip=110.00, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-10-09",
+      "payment_id": "200000060789567000",
+      "error": "total_mismatch: expected=274.97 actual=255.17 (subtotal=198.00, tax=17.57, tip=59.40, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    },
+    {
+      "date": "2025-12-06",
+      "payment_id": "200000062930434831",
+      "error": "total_mismatch: expected=267.26 actual=227.26 (subtotal=172.00, tax=15.26, tip=80.00, gratuity=0.00)",
+      "category": "cancelled_payment",
+      "cancelled_payments": 1
+    }
+  ],
+  "remaining_201_partial_data": [
+    {
+      "date": "2025-02-01",
+      "payment_id": "200000065458006324",
+      "check_number": 48,
+      "server": "Kara Keitt",
+      "subtotal": 428.0,
+      "total": 466.0,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-02-01",
+      "payment_id": "200000065460109374",
+      "check_number": 56,
+      "server": "Bartender UPSTAIRS AM",
+      "subtotal": 18.0,
+      "total": 19.6,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-02-01",
+      "payment_id": "200000065464601177",
+      "check_number": 59,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 34.0,
+      "total": 37.02,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-02-01",
+      "payment_id": "200000065465068260",
+      "check_number": 60,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 51.0,
+      "total": 55.53,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-02-01",
+      "payment_id": "200000065465441222",
+      "check_number": 64,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 12.0,
+      "total": 13.07,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065469407609",
+      "check_number": 128,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 319.0,
+      "total": 347.33,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065470019243",
+      "check_number": 136,
+      "server": "Carlos Huitzil",
+      "subtotal": 878.0,
+      "total": 955.95,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065470062004",
+      "check_number": 137,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 42.0,
+      "total": 45.73,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065470112055",
+      "check_number": 139,
+      "server": "Hendrik Morris",
+      "subtotal": 228.0,
+      "total": 248.24,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065470243326",
+      "check_number": 141,
+      "server": "Gerardo Alvarez",
+      "subtotal": 680.0,
+      "total": 740.35,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065470527830",
+      "check_number": 148,
+      "server": "Isela Solano",
+      "subtotal": 488.0,
+      "total": 531.34,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065470957223",
+      "check_number": 151,
+      "server": "Simon Kozluk",
+      "subtotal": 326.0,
+      "total": 354.94,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065471567909",
+      "check_number": 159,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 46.0,
+      "total": 50.09,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065472237798",
+      "check_number": 168,
+      "server": "Hendrik Morris",
+      "subtotal": 366.0,
+      "total": 398.49,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065472349086",
+      "check_number": 169,
+      "server": "Gerardo Alvarez",
+      "subtotal": 142.0,
+      "total": 154.6,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065472381083",
+      "check_number": 172,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 168.0,
+      "total": 182.91,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065472585859",
+      "check_number": 174,
+      "server": "Carlos Huitzil",
+      "subtotal": 258.0,
+      "total": 280.91,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065472822382",
+      "check_number": 175,
+      "server": "Carlos Huitzil",
+      "subtotal": 162.0,
+      "total": 176.38,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065472998066",
+      "check_number": 178,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 93.0,
+      "total": 101.25,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065473238174",
+      "check_number": 182,
+      "server": "Jean Then",
+      "subtotal": 322.0,
+      "total": 350.56,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065473620454",
+      "check_number": 184,
+      "server": "Isela Solano",
+      "subtotal": 224.0,
+      "total": 243.88,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065473623242",
+      "check_number": 185,
+      "server": "Isela Solano",
+      "subtotal": 188.0,
+      "total": 204.69,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065473644781",
+      "check_number": 186,
+      "server": "Simon Kozluk",
+      "subtotal": 271.0,
+      "total": 295.05,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065473704458",
+      "check_number": 187,
+      "server": "Edmar Barrios",
+      "subtotal": 350.0,
+      "total": 381.06,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065473843001",
+      "check_number": 189,
+      "server": "Carlos Huitzil",
+      "subtotal": 168.0,
+      "total": 182.91,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065474162952",
+      "check_number": 192,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 219.0,
+      "total": 238.43,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065474453816",
+      "check_number": 198,
+      "server": "Simon Kozluk",
+      "subtotal": 173.0,
+      "total": 188.36,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065474538006",
+      "check_number": 199,
+      "server": "Natasa Warren",
+      "subtotal": 346.0,
+      "total": 376.71,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065474612871",
+      "check_number": 201,
+      "server": "Roberto Araujo",
+      "subtotal": 261.0,
+      "total": 284.15,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065474618436",
+      "check_number": 202,
+      "server": "Roberto Araujo",
+      "subtotal": 210.0,
+      "total": 228.64,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065474703811",
+      "check_number": 203,
+      "server": "Gerardo Alvarez",
+      "subtotal": 160.0,
+      "total": 174.21,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065474719041",
+      "check_number": 204,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 150.0,
+      "total": 163.31,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065474747586",
+      "check_number": 206,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 180.0,
+      "total": 195.97,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065474754020",
+      "check_number": 207,
+      "server": "Kara Keitt",
+      "subtotal": 248.0,
+      "total": 270.01,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065474760501",
+      "check_number": 208,
+      "server": "Isela Solano",
+      "subtotal": 137.0,
+      "total": 149.17,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065475063037",
+      "check_number": 211,
+      "server": "Natasa Warren",
+      "subtotal": 258.0,
+      "total": 280.91,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065475114686",
+      "check_number": 212,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 276.0,
+      "total": 300.5,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065475265753",
+      "check_number": 214,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 300.0,
+      "total": 326.62,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065475434769",
+      "check_number": 215,
+      "server": "Simon Kozluk",
+      "subtotal": 184.0,
+      "total": 200.32,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065475642431",
+      "check_number": 217,
+      "server": "Carlos Huitzil",
+      "subtotal": 263.0,
+      "total": 286.34,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065475757171",
+      "check_number": 218,
+      "server": "Joseph Ruiz",
+      "subtotal": 220.0,
+      "total": 239.52,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065475874767",
+      "check_number": 221,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 42.0,
+      "total": 45.72,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065476153480",
+      "check_number": 223,
+      "server": "Hendrik Morris",
+      "subtotal": 77.0,
+      "total": 83.83,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065476156015",
+      "check_number": 222,
+      "server": "Jean Then",
+      "subtotal": 246.0,
+      "total": 267.84,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065476194637",
+      "check_number": 224,
+      "server": "Carlos Huitzil",
+      "subtotal": 94.0,
+      "total": 102.34,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065476282103",
+      "check_number": 226,
+      "server": "Simon Kozluk",
+      "subtotal": 318.0,
+      "total": 346.22,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065476433592",
+      "check_number": 230,
+      "server": "Gerardo Alvarez",
+      "subtotal": 297.0,
+      "total": 323.37,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065476444547",
+      "check_number": 232,
+      "server": "Edmar Barrios",
+      "subtotal": 138.0,
+      "total": 150.25,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065476616161",
+      "check_number": 233,
+      "server": "Hendrik Morris",
+      "subtotal": 197.0,
+      "total": 214.49,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065476819254",
+      "check_number": 235,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 20.0,
+      "total": 21.78,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065476828126",
+      "check_number": 236,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 82.0,
+      "total": 89.28,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065476920252",
+      "check_number": 238,
+      "server": "Joseph Ruiz",
+      "subtotal": 431.0,
+      "total": 469.26,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065476937128",
+      "check_number": 239,
+      "server": "Edmar Barrios",
+      "subtotal": 6.0,
+      "total": 6.53,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065477077787",
+      "check_number": 241,
+      "server": "Hendrik Morris",
+      "subtotal": 196.0,
+      "total": 213.4,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065477152911",
+      "check_number": 242,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 18.0,
+      "total": 19.6,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-04",
+      "payment_id": "200000065477182525",
+      "check_number": 243,
+      "server": "Roberto Araujo",
+      "subtotal": 74.0,
+      "total": 80.57,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065469407609",
+      "check_number": 128,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 319.0,
+      "total": 347.33,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065470019243",
+      "check_number": 136,
+      "server": "Carlos Huitzil",
+      "subtotal": 878.0,
+      "total": 955.95,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065470062004",
+      "check_number": 137,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 42.0,
+      "total": 45.73,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065470112055",
+      "check_number": 139,
+      "server": "Hendrik Morris",
+      "subtotal": 228.0,
+      "total": 248.24,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065470243326",
+      "check_number": 141,
+      "server": "Gerardo Alvarez",
+      "subtotal": 680.0,
+      "total": 740.35,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065470527830",
+      "check_number": 148,
+      "server": "Isela Solano",
+      "subtotal": 488.0,
+      "total": 531.34,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065470957223",
+      "check_number": 151,
+      "server": "Simon Kozluk",
+      "subtotal": 326.0,
+      "total": 354.94,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065471567909",
+      "check_number": 159,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 46.0,
+      "total": 50.09,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065472237798",
+      "check_number": 168,
+      "server": "Hendrik Morris",
+      "subtotal": 366.0,
+      "total": 398.49,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065472349086",
+      "check_number": 169,
+      "server": "Gerardo Alvarez",
+      "subtotal": 142.0,
+      "total": 154.6,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065472381083",
+      "check_number": 172,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 168.0,
+      "total": 182.91,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065472585859",
+      "check_number": 174,
+      "server": "Carlos Huitzil",
+      "subtotal": 258.0,
+      "total": 280.91,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065472822382",
+      "check_number": 175,
+      "server": "Carlos Huitzil",
+      "subtotal": 162.0,
+      "total": 176.38,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065472998066",
+      "check_number": 178,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 93.0,
+      "total": 101.25,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065473238174",
+      "check_number": 182,
+      "server": "Jean Then",
+      "subtotal": 322.0,
+      "total": 350.56,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065473620454",
+      "check_number": 184,
+      "server": "Isela Solano",
+      "subtotal": 224.0,
+      "total": 243.88,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065473623242",
+      "check_number": 185,
+      "server": "Isela Solano",
+      "subtotal": 188.0,
+      "total": 204.69,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065473644781",
+      "check_number": 186,
+      "server": "Simon Kozluk",
+      "subtotal": 271.0,
+      "total": 295.05,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065473704458",
+      "check_number": 187,
+      "server": "Edmar Barrios",
+      "subtotal": 350.0,
+      "total": 381.06,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065473843001",
+      "check_number": 189,
+      "server": "Carlos Huitzil",
+      "subtotal": 168.0,
+      "total": 182.91,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065474162952",
+      "check_number": 192,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 219.0,
+      "total": 238.43,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065474453816",
+      "check_number": 198,
+      "server": "Simon Kozluk",
+      "subtotal": 173.0,
+      "total": 188.36,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065474538006",
+      "check_number": 199,
+      "server": "Natasa Warren",
+      "subtotal": 346.0,
+      "total": 376.71,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065474612871",
+      "check_number": 201,
+      "server": "Roberto Araujo",
+      "subtotal": 261.0,
+      "total": 284.15,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065474618436",
+      "check_number": 202,
+      "server": "Roberto Araujo",
+      "subtotal": 210.0,
+      "total": 228.64,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065474703811",
+      "check_number": 203,
+      "server": "Gerardo Alvarez",
+      "subtotal": 160.0,
+      "total": 174.21,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065474719041",
+      "check_number": 204,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 150.0,
+      "total": 163.31,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065474747586",
+      "check_number": 206,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 180.0,
+      "total": 195.97,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065474754020",
+      "check_number": 207,
+      "server": "Kara Keitt",
+      "subtotal": 248.0,
+      "total": 270.01,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065474760501",
+      "check_number": 208,
+      "server": "Isela Solano",
+      "subtotal": 137.0,
+      "total": 149.17,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065475063037",
+      "check_number": 211,
+      "server": "Natasa Warren",
+      "subtotal": 258.0,
+      "total": 280.91,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065475114686",
+      "check_number": 212,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 276.0,
+      "total": 300.5,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065475265753",
+      "check_number": 214,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 300.0,
+      "total": 326.62,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065475434769",
+      "check_number": 215,
+      "server": "Simon Kozluk",
+      "subtotal": 184.0,
+      "total": 200.32,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065475642431",
+      "check_number": 217,
+      "server": "Carlos Huitzil",
+      "subtotal": 263.0,
+      "total": 286.34,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065475757171",
+      "check_number": 218,
+      "server": "Joseph Ruiz",
+      "subtotal": 220.0,
+      "total": 239.52,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065475874767",
+      "check_number": 221,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 42.0,
+      "total": 45.72,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065476153480",
+      "check_number": 223,
+      "server": "Hendrik Morris",
+      "subtotal": 77.0,
+      "total": 83.83,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065476156015",
+      "check_number": 222,
+      "server": "Jean Then",
+      "subtotal": 246.0,
+      "total": 267.84,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065476194637",
+      "check_number": 224,
+      "server": "Carlos Huitzil",
+      "subtotal": 94.0,
+      "total": 102.34,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065476282103",
+      "check_number": 226,
+      "server": "Simon Kozluk",
+      "subtotal": 318.0,
+      "total": 346.22,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065476433592",
+      "check_number": 230,
+      "server": "Gerardo Alvarez",
+      "subtotal": 297.0,
+      "total": 323.37,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065476444547",
+      "check_number": 232,
+      "server": "Edmar Barrios",
+      "subtotal": 138.0,
+      "total": 150.25,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065476616161",
+      "check_number": 233,
+      "server": "Hendrik Morris",
+      "subtotal": 197.0,
+      "total": 214.49,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065476819254",
+      "check_number": 235,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 20.0,
+      "total": 21.78,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065476828126",
+      "check_number": 236,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 82.0,
+      "total": 89.28,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065476920252",
+      "check_number": 238,
+      "server": "Joseph Ruiz",
+      "subtotal": 431.0,
+      "total": 469.26,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065476937128",
+      "check_number": 239,
+      "server": "Edmar Barrios",
+      "subtotal": 6.0,
+      "total": 6.53,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065477077787",
+      "check_number": 241,
+      "server": "Hendrik Morris",
+      "subtotal": 196.0,
+      "total": 213.4,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065477152911",
+      "check_number": 242,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 18.0,
+      "total": 19.6,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-05",
+      "payment_id": "200000065477182525",
+      "check_number": 243,
+      "server": "Roberto Araujo",
+      "subtotal": 74.0,
+      "total": 80.57,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065469407609",
+      "check_number": 128,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 319.0,
+      "total": 347.33,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065470019243",
+      "check_number": 136,
+      "server": "Carlos Huitzil",
+      "subtotal": 878.0,
+      "total": 955.95,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065470062004",
+      "check_number": 137,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 42.0,
+      "total": 45.73,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065470112055",
+      "check_number": 139,
+      "server": "Hendrik Morris",
+      "subtotal": 228.0,
+      "total": 248.24,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065470243326",
+      "check_number": 141,
+      "server": "Gerardo Alvarez",
+      "subtotal": 680.0,
+      "total": 740.35,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065470527830",
+      "check_number": 148,
+      "server": "Isela Solano",
+      "subtotal": 488.0,
+      "total": 531.34,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065470957223",
+      "check_number": 151,
+      "server": "Simon Kozluk",
+      "subtotal": 326.0,
+      "total": 354.94,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065471567909",
+      "check_number": 159,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 46.0,
+      "total": 50.09,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065472237798",
+      "check_number": 168,
+      "server": "Hendrik Morris",
+      "subtotal": 366.0,
+      "total": 398.49,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065472349086",
+      "check_number": 169,
+      "server": "Gerardo Alvarez",
+      "subtotal": 142.0,
+      "total": 154.6,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065472381083",
+      "check_number": 172,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 168.0,
+      "total": 182.91,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065472585859",
+      "check_number": 174,
+      "server": "Carlos Huitzil",
+      "subtotal": 258.0,
+      "total": 280.91,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065472822382",
+      "check_number": 175,
+      "server": "Carlos Huitzil",
+      "subtotal": 162.0,
+      "total": 176.38,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065472998066",
+      "check_number": 178,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 93.0,
+      "total": 101.25,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065473238174",
+      "check_number": 182,
+      "server": "Jean Then",
+      "subtotal": 322.0,
+      "total": 350.56,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065473620454",
+      "check_number": 184,
+      "server": "Isela Solano",
+      "subtotal": 224.0,
+      "total": 243.88,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065473623242",
+      "check_number": 185,
+      "server": "Isela Solano",
+      "subtotal": 188.0,
+      "total": 204.69,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065473644781",
+      "check_number": 186,
+      "server": "Simon Kozluk",
+      "subtotal": 271.0,
+      "total": 295.05,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065473704458",
+      "check_number": 187,
+      "server": "Edmar Barrios",
+      "subtotal": 350.0,
+      "total": 381.06,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065473843001",
+      "check_number": 189,
+      "server": "Carlos Huitzil",
+      "subtotal": 168.0,
+      "total": 182.91,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065474162952",
+      "check_number": 192,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 219.0,
+      "total": 238.43,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065474453816",
+      "check_number": 198,
+      "server": "Simon Kozluk",
+      "subtotal": 173.0,
+      "total": 188.36,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065474538006",
+      "check_number": 199,
+      "server": "Natasa Warren",
+      "subtotal": 346.0,
+      "total": 376.71,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065474612871",
+      "check_number": 201,
+      "server": "Roberto Araujo",
+      "subtotal": 261.0,
+      "total": 284.15,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065474618436",
+      "check_number": 202,
+      "server": "Roberto Araujo",
+      "subtotal": 210.0,
+      "total": 228.64,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065474703811",
+      "check_number": 203,
+      "server": "Gerardo Alvarez",
+      "subtotal": 160.0,
+      "total": 174.21,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065474719041",
+      "check_number": 204,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 150.0,
+      "total": 163.31,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065474747586",
+      "check_number": 206,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 180.0,
+      "total": 195.97,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065474754020",
+      "check_number": 207,
+      "server": "Kara Keitt",
+      "subtotal": 248.0,
+      "total": 270.01,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065474760501",
+      "check_number": 208,
+      "server": "Isela Solano",
+      "subtotal": 137.0,
+      "total": 149.17,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065475063037",
+      "check_number": 211,
+      "server": "Natasa Warren",
+      "subtotal": 258.0,
+      "total": 280.91,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065475114686",
+      "check_number": 212,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 276.0,
+      "total": 300.5,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065475265753",
+      "check_number": 214,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 300.0,
+      "total": 326.62,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065475434769",
+      "check_number": 215,
+      "server": "Simon Kozluk",
+      "subtotal": 184.0,
+      "total": 200.32,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065475642431",
+      "check_number": 217,
+      "server": "Carlos Huitzil",
+      "subtotal": 263.0,
+      "total": 286.34,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065475757171",
+      "check_number": 218,
+      "server": "Joseph Ruiz",
+      "subtotal": 220.0,
+      "total": 239.52,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065475874767",
+      "check_number": 221,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 42.0,
+      "total": 45.72,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065476153480",
+      "check_number": 223,
+      "server": "Hendrik Morris",
+      "subtotal": 77.0,
+      "total": 83.83,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065476156015",
+      "check_number": 222,
+      "server": "Jean Then",
+      "subtotal": 246.0,
+      "total": 267.84,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065476194637",
+      "check_number": 224,
+      "server": "Carlos Huitzil",
+      "subtotal": 94.0,
+      "total": 102.34,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065476282103",
+      "check_number": 226,
+      "server": "Simon Kozluk",
+      "subtotal": 318.0,
+      "total": 346.22,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065476433592",
+      "check_number": 230,
+      "server": "Gerardo Alvarez",
+      "subtotal": 297.0,
+      "total": 323.37,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065476444547",
+      "check_number": 232,
+      "server": "Edmar Barrios",
+      "subtotal": 138.0,
+      "total": 150.25,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065476616161",
+      "check_number": 233,
+      "server": "Hendrik Morris",
+      "subtotal": 197.0,
+      "total": 214.49,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065476819254",
+      "check_number": 235,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 20.0,
+      "total": 21.78,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065476828126",
+      "check_number": 236,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 82.0,
+      "total": 89.28,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065476920252",
+      "check_number": 238,
+      "server": "Joseph Ruiz",
+      "subtotal": 431.0,
+      "total": 469.26,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065476937128",
+      "check_number": 239,
+      "server": "Edmar Barrios",
+      "subtotal": 6.0,
+      "total": 6.53,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065477077787",
+      "check_number": 241,
+      "server": "Hendrik Morris",
+      "subtotal": 196.0,
+      "total": 213.4,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065477152911",
+      "check_number": 242,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 18.0,
+      "total": 19.6,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-05-08",
+      "payment_id": "200000065477182525",
+      "check_number": 243,
+      "server": "Roberto Araujo",
+      "subtotal": 74.0,
+      "total": 80.57,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065471567909",
+      "check_number": 159,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 46.0,
+      "total": 50.09,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065476828126",
+      "check_number": 236,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 279.0,
+      "total": 303.76,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065477676440",
+      "check_number": 246,
+      "server": "Isela Solano",
+      "subtotal": 367.0,
+      "total": 399.57,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065477686271",
+      "check_number": 245,
+      "server": "Joseph Ruiz",
+      "subtotal": 421.0,
+      "total": 458.34,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065477756917",
+      "check_number": 249,
+      "server": "Kara Keitt",
+      "subtotal": 525.0,
+      "total": 571.6,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065478288514",
+      "check_number": 260,
+      "server": "Natasa Warren",
+      "subtotal": 457.0,
+      "total": 497.54,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065478354498",
+      "check_number": 262,
+      "server": "Isela Solano",
+      "subtotal": 367.0,
+      "total": 399.56,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065478480177",
+      "check_number": 263,
+      "server": "Joseph Ruiz",
+      "subtotal": 162.0,
+      "total": 176.39,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065478744511",
+      "check_number": 267,
+      "server": "Carlos Huitzil",
+      "subtotal": 98.0,
+      "total": 106.7,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065478811910",
+      "check_number": 268,
+      "server": "Roberto Araujo",
+      "subtotal": 452.0,
+      "total": 492.13,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065479277152",
+      "check_number": 271,
+      "server": "Jean Then",
+      "subtotal": 572.0,
+      "total": 622.77,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065479291179",
+      "check_number": 273,
+      "server": "Jean Then",
+      "subtotal": 86.0,
+      "total": 93.63,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065479375520",
+      "check_number": 276,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 207.0,
+      "total": 225.36,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065479536825",
+      "check_number": 280,
+      "server": "Isela Solano",
+      "subtotal": 157.0,
+      "total": 170.93,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065479593009",
+      "check_number": 281,
+      "server": "Carlos Huitzil",
+      "subtotal": 212.0,
+      "total": 230.82,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065479787404",
+      "check_number": 287,
+      "server": "Hendrik Morris",
+      "subtotal": 372.0,
+      "total": 405.01,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065480125670",
+      "check_number": 289,
+      "server": "Natasa Warren",
+      "subtotal": 337.0,
+      "total": 366.91,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065480280711",
+      "check_number": 291,
+      "server": "Isela Solano",
+      "subtotal": 186.0,
+      "total": 202.51,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065480304177",
+      "check_number": 293,
+      "server": "Isela Solano",
+      "subtotal": 243.0,
+      "total": 264.56,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065480323253",
+      "check_number": 295,
+      "server": "Simon Kozluk",
+      "subtotal": 261.0,
+      "total": 284.17,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065480325882",
+      "check_number": 296,
+      "server": "Bartender DOWNSTAIRS PM",
+      "subtotal": 99.0,
+      "total": 107.79,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065480560129",
+      "check_number": 301,
+      "server": "Carlos Huitzil",
+      "subtotal": 367.0,
+      "total": 399.58,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065480727524",
+      "check_number": 304,
+      "server": "Jean Then",
+      "subtotal": 272.0,
+      "total": 296.17,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065481091133",
+      "check_number": 305,
+      "server": "Edmar Barrios",
+      "subtotal": 134.0,
+      "total": 145.89,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065481167830",
+      "check_number": 306,
+      "server": "Carlos Huitzil",
+      "subtotal": 245.0,
+      "total": 266.74,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065481729698",
+      "check_number": 313,
+      "server": "Simon Kozluk",
+      "subtotal": 155.0,
+      "total": 168.75,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065481881361",
+      "check_number": 314,
+      "server": "Joseph Ruiz",
+      "subtotal": 213.0,
+      "total": 231.9,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065481896986",
+      "check_number": 315,
+      "server": "Simon Kozluk",
+      "subtotal": 106.0,
+      "total": 115.42,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065482063328",
+      "check_number": 317,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 40.0,
+      "total": 43.55,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-07-25",
+      "payment_id": "200000065482433595",
+      "check_number": 318,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 45.0,
+      "total": 48.99,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-08-26",
+      "payment_id": "200000065478811910",
+      "check_number": 268,
+      "server": "Jean Then",
+      "subtotal": 452.0,
+      "total": 492.13,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-08-26",
+      "payment_id": "200000065480280711",
+      "check_number": 291,
+      "server": "Isela Solano",
+      "subtotal": 193.0,
+      "total": 210.13,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-08-26",
+      "payment_id": "200000065480560129",
+      "check_number": 301,
+      "server": "Carlos Huitzil",
+      "subtotal": 1002.0,
+      "total": 1090.94,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-08-26",
+      "payment_id": "200000065481091133",
+      "check_number": 305,
+      "server": "Edmar Barrios",
+      "subtotal": 134.0,
+      "total": 145.89,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-08-26",
+      "payment_id": "200000065481167830",
+      "check_number": 306,
+      "server": "Carlos Huitzil",
+      "subtotal": 257.0,
+      "total": 279.81,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-08-26",
+      "payment_id": "200000065481729698",
+      "check_number": 313,
+      "server": "Simon Kozluk",
+      "subtotal": 155.0,
+      "total": 168.75,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-08-26",
+      "payment_id": "200000065481881361",
+      "check_number": 314,
+      "server": "Joseph Ruiz",
+      "subtotal": 213.0,
+      "total": 231.9,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-08-26",
+      "payment_id": "200000065481896986",
+      "check_number": 315,
+      "server": "Simon Kozluk",
+      "subtotal": 164.0,
+      "total": 178.58,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-08-26",
+      "payment_id": "200000065482433595",
+      "check_number": 318,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 100.0,
+      "total": 108.87,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-08-26",
+      "payment_id": "200000065482516747",
+      "check_number": 319,
+      "server": "Natasa Warren",
+      "subtotal": 241.0,
+      "total": 262.39,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-08-26",
+      "payment_id": "200000065482810870",
+      "check_number": 323,
+      "server": "Simon Kozluk",
+      "subtotal": 178.0,
+      "total": 193.8,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-08-26",
+      "payment_id": "200000065482949650",
+      "check_number": 325,
+      "server": "Jean Then",
+      "subtotal": 67.0,
+      "total": 72.94,
+      "n_data_keys": 20
+    },
+    {
+      "date": "2025-08-26",
+      "payment_id": "200000065482955763",
+      "check_number": 326,
+      "server": "Bartender UPSTAIRS PM",
+      "subtotal": 138.0,
+      "total": 150.24,
+      "n_data_keys": 20
+    }
+  ]
+}

@@ -1,0 +1,1808 @@
+{
+  "from_date": "2025-07-26",
+  "to_date": "2025-07-26",
+  "extracted_on": "2026-02-16T03:24:12Z",
+  "extraction_duration": 90.62,
+  "menu_items_summary": [
+    {
+      "Menu Item": "**Bread - D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "238",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "FIRE MAIN COURSE",
+      "Menu Group": "FIRE COURSE",
+      "Menu": "DINNER",
+      "Item Qty": "114",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "Lobster Pasta MC-D",
+      "Menu Group": "Pastas Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "55",
+      "Net Amount": "$2,862.00"
+    },
+    {
+      "Menu Item": "Caesar Salad- D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "54",
+      "Net Amount": "$1,166.00"
+    },
+    {
+      "Menu Item": "Black Truffle Cacio Pepe MC-D",
+      "Menu Group": "Pastas Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "50",
+      "Net Amount": "$2,250.00"
+    },
+    {
+      "Menu Item": "Tuscan Fries - D",
+      "Menu Group": "Sides Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "48",
+      "Net Amount": "$682.54"
+    },
+    {
+      "Menu Item": "Brussels Sprouts-D",
+      "Menu Group": "Sides Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "44",
+      "Net Amount": "$738.00"
+    },
+    {
+      "Menu Item": "Dressed Oysters - D",
+      "Menu Group": "Shellfish Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "42",
+      "Net Amount": "$210.00"
+    },
+    {
+      "Menu Item": "Water-Pellegrino",
+      "Menu Group": "Water/Soda",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "39",
+      "Net Amount": "$456.00"
+    },
+    {
+      "Menu Item": "Chicken Parm MC-D",
+      "Menu Group": "Chicken Parm Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "38",
+      "Net Amount": "$3,268.00"
+    },
+    {
+      "Menu Item": "Corn Brulee - D",
+      "Menu Group": "Sides Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "37",
+      "Net Amount": "$456.00"
+    },
+    {
+      "Menu Item": "Peroni",
+      "Menu Group": "Beer",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "34",
+      "Net Amount": "$306.00"
+    },
+    {
+      "Menu Item": "Ricotta Honey - D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "33",
+      "Net Amount": "$588.00"
+    },
+    {
+      "Menu Item": "**Bread - L",
+      "Menu Group": "Appetizers Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "32",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "Paccheri Amatriciana MC-D",
+      "Menu Group": "Pastas Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "32",
+      "Net Amount": "$1,054.00"
+    },
+    {
+      "Menu Item": "Filet Classic - D",
+      "Menu Group": "Entrees Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "30",
+      "Net Amount": "$1,920.00"
+    },
+    {
+      "Menu Item": "Fusilli alla Manzo MC - D",
+      "Menu Group": "Pastas Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "29",
+      "Net Amount": "$957.09"
+    },
+    {
+      "Menu Item": "Water-Panna",
+      "Menu Group": "Water/Soda",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "28",
+      "Net Amount": "$336.00"
+    },
+    {
+      "Menu Item": "PICK UP NOW",
+      "Menu Group": "FIRE COURSE",
+      "Menu": "DINNER",
+      "Item Qty": "26",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "Diet Coke",
+      "Menu Group": "Water/Soda",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "25",
+      "Net Amount": "$125.00"
+    },
+    {
+      "Menu Item": "NY Chopped Salad - D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "24",
+      "Net Amount": "$552.00"
+    },
+    {
+      "Menu Item": "Titos UP",
+      "Menu Group": "Vodka",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "24",
+      "Net Amount": "$483.00"
+    },
+    {
+      "Menu Item": "Coke",
+      "Menu Group": "Water/Soda",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "24",
+      "Net Amount": "$115.00"
+    },
+    {
+      "Menu Item": "Grilled Octopus-D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "24",
+      "Net Amount": "$564.19"
+    },
+    {
+      "Menu Item": "Tricolore Margarita Cube",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "23",
+      "Net Amount": "$446.58"
+    },
+    {
+      "Menu Item": "Ferrero Rocher-D",
+      "Menu Group": "Desserts Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "23",
+      "Net Amount": "$156.00"
+    },
+    {
+      "Menu Item": "Calamari Casino- D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "22",
+      "Net Amount": "$437.00"
+    },
+    {
+      "Menu Item": "Shirley Temple",
+      "Menu Group": "Water/Soda",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "22",
+      "Net Amount": "$132.00"
+    },
+    {
+      "Menu Item": "57 Spritz",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "21",
+      "Net Amount": "$420.00"
+    },
+    {
+      "Menu Item": "Espresso Martini",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "21",
+      "Net Amount": "$420.00"
+    },
+    {
+      "Menu Item": "Sorbetto di Limone-D",
+      "Menu Group": "Desserts Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "21",
+      "Net Amount": "$84.00"
+    },
+    {
+      "Menu Item": "Mafaldine MC-D",
+      "Menu Group": "Pastas Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "20",
+      "Net Amount": "$640.00"
+    },
+    {
+      "Menu Item": "GL Tullia Prosecco",
+      "Menu Group": "Sparkling Glass",
+      "Menu": "WINE",
+      "Item Qty": "19",
+      "Net Amount": "$323.00"
+    },
+    {
+      "Menu Item": "Sticky Toffee Pudding - D",
+      "Menu Group": "Desserts Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "19",
+      "Net Amount": "$165.00"
+    },
+    {
+      "Menu Item": "PICK UP ENTREE NOW",
+      "Menu Group": "FIRE COURSE",
+      "Menu": "DINNER",
+      "Item Qty": "18",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "Pocket Dial",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "18",
+      "Net Amount": "$304.00"
+    },
+    {
+      "Menu Item": "Ketel One UP",
+      "Menu Group": "Vodka",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "17",
+      "Net Amount": "$336.00"
+    },
+    {
+      "Menu Item": "Yellowtail Crudo- D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "17",
+      "Net Amount": "$364.00"
+    },
+    {
+      "Menu Item": "NY Strip Steak - D",
+      "Menu Group": "Entrees Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "17",
+      "Net Amount": "$1,003.00"
+    },
+    {
+      "Menu Item": "GL Gramercy Cellars Cabernet",
+      "Menu Group": "Red Glass",
+      "Menu": "WINE",
+      "Item Qty": "17",
+      "Net Amount": "$285.00"
+    },
+    {
+      "Menu Item": "GL Benton Lane PN",
+      "Menu Group": "Red Glass",
+      "Menu": "WINE",
+      "Item Qty": "16",
+      "Net Amount": "$328.89"
+    },
+    {
+      "Menu Item": "GL Lilou Sauvignon Blanc",
+      "Menu Group": "White/Rose Glass",
+      "Menu": "WINE",
+      "Item Qty": "16",
+      "Net Amount": "$320.00"
+    },
+    {
+      "Menu Item": "Branzino- D",
+      "Menu Group": "Entrees Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "15",
+      "Net Amount": "$672.00"
+    },
+    {
+      "Menu Item": "Tuna & Avocado Carpaccio-D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "15",
+      "Net Amount": "$324.79"
+    },
+    {
+      "Menu Item": "Casella's Prosciutto - D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "14",
+      "Net Amount": "$312.00"
+    },
+    {
+      "Menu Item": "Veal Milanese - D",
+      "Menu Group": "Entrees Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "14",
+      "Net Amount": "$686.00"
+    },
+    {
+      "Menu Item": "Casamigos Blanco RX",
+      "Menu Group": "Tequila",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "14",
+      "Net Amount": "$266.00"
+    },
+    {
+      "Menu Item": "Tomato & Straciatella - D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "13",
+      "Net Amount": "$250.00"
+    },
+    {
+      "Menu Item": "Agnolotti Porterhouse MC-D",
+      "Menu Group": "Pastas Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "13",
+      "Net Amount": "$572.00"
+    },
+    {
+      "Menu Item": "GL Felsina Chianti",
+      "Menu Group": "Red Glass",
+      "Menu": "WINE",
+      "Item Qty": "13",
+      "Net Amount": "$234.00"
+    },
+    {
+      "Menu Item": "GL Marguerite Symphonie Rose",
+      "Menu Group": "White/Rose Glass",
+      "Menu": "WINE",
+      "Item Qty": "13",
+      "Net Amount": "$299.00"
+    },
+    {
+      "Menu Item": "Baked Clams - D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "12",
+      "Net Amount": "$253.00"
+    },
+    {
+      "Menu Item": "Nitro Negroni",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "12",
+      "Net Amount": "$216.00"
+    },
+    {
+      "Menu Item": "Iced Tea",
+      "Menu Group": "Water/Soda",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "12",
+      "Net Amount": "$72.00"
+    },
+    {
+      "Menu Item": "Corn Gnudi MC-D",
+      "Menu Group": "Pastas Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "12",
+      "Net Amount": "$348.00"
+    },
+    {
+      "Menu Item": "Salty Pistachio-D",
+      "Menu Group": "Desserts Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "12",
+      "Net Amount": "$60.00"
+    },
+    {
+      "Menu Item": "Tiramisu- D",
+      "Menu Group": "Desserts Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "12",
+      "Net Amount": "$162.00"
+    },
+    {
+      "Menu Item": "Meatballs APP-D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "12",
+      "Net Amount": "$253.00"
+    },
+    {
+      "Menu Item": "Faroe Island Salmon - D",
+      "Menu Group": "Entrees Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "12",
+      "Net Amount": "$552.00"
+    },
+    {
+      "Menu Item": "Mezcalero",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "12",
+      "Net Amount": "$252.00"
+    },
+    {
+      "Menu Item": "Amarena Cherry Ice Cream Cake",
+      "Menu Group": "Desserts Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "12",
+      "Net Amount": "$68.00"
+    },
+    {
+      "Menu Item": "Pork Chop - D",
+      "Menu Group": "Entrees Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "11",
+      "Net Amount": "$380.00"
+    },
+    {
+      "Menu Item": "Bone-In Dry Aged Sirloin-D",
+      "Menu Group": "Entrees Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "11",
+      "Net Amount": "$751.08"
+    },
+    {
+      "Menu Item": "Snap Peas - D",
+      "Menu Group": "Sides Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "11",
+      "Net Amount": "$112.00"
+    },
+    {
+      "Menu Item": "Casamigos Reposado UP",
+      "Menu Group": "Tequila",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "10",
+      "Net Amount": "$230.00"
+    },
+    {
+      "Menu Item": "Aperol Spritz",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "10",
+      "Net Amount": "$180.00"
+    },
+    {
+      "Menu Item": "Meatballs SIDE-D",
+      "Menu Group": "Sides Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "10",
+      "Net Amount": "$138.00"
+    },
+    {
+      "Menu Item": "Lobster Toast APP - D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "10",
+      "Net Amount": "$380.00"
+    },
+    {
+      "Menu Item": "Filet Chianti Poivre - D",
+      "Menu Group": "Entrees Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "10",
+      "Net Amount": "$660.00"
+    },
+    {
+      "Menu Item": "Grey Goose UP",
+      "Menu Group": "Vodka",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "9",
+      "Net Amount": "$189.00"
+    },
+    {
+      "Menu Item": "Espresso",
+      "Menu Group": "Coffee/Tea",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "9",
+      "Net Amount": "$54.00"
+    },
+    {
+      "Menu Item": "The Cake Stand - D",
+      "Menu Group": "Desserts Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "9",
+      "Net Amount": "$189.00"
+    },
+    {
+      "Menu Item": "Mocktail-Falso Spritz",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "9",
+      "Net Amount": "$120.00"
+    },
+    {
+      "Menu Item": "Chicken Parm APP- D",
+      "Menu Group": "Chicken Parm Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "8",
+      "Net Amount": "$688.00"
+    },
+    {
+      "Menu Item": "Sausage Toast- D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "8",
+      "Net Amount": "$168.00"
+    },
+    {
+      "Menu Item": "Pasta Tomato - D",
+      "Menu Group": "Pastas Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "8",
+      "Net Amount": "$184.00"
+    },
+    {
+      "Menu Item": "Broccoli Rabe - D",
+      "Menu Group": "Sides Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "8",
+      "Net Amount": "$128.00"
+    },
+    {
+      "Menu Item": "Spinach - D",
+      "Menu Group": "Sides Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "8",
+      "Net Amount": "$128.00"
+    },
+    {
+      "Menu Item": "A Midtown",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "8",
+      "Net Amount": "$135.84"
+    },
+    {
+      "Menu Item": "Quality Mule",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "8",
+      "Net Amount": "$160.00"
+    },
+    {
+      "Menu Item": "Makers Mark UP",
+      "Menu Group": "Bourbon/Rye",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "8",
+      "Net Amount": "$168.00"
+    },
+    {
+      "Menu Item": "Cappuccino",
+      "Menu Group": "Coffee/Tea",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "8",
+      "Net Amount": "$56.00"
+    },
+    {
+      "Menu Item": "Lemonade",
+      "Menu Group": "Water/Soda",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "8",
+      "Net Amount": "$48.00"
+    },
+    {
+      "Menu Item": "GL Caposaldo PG",
+      "Menu Group": "White/Rose Glass",
+      "Menu": "WINE",
+      "Item Qty": "8",
+      "Net Amount": "$136.00"
+    },
+    {
+      "Menu Item": "GL Antinori Il Bruciato",
+      "Menu Group": "Red Glass",
+      "Menu": "WINE",
+      "Item Qty": "8",
+      "Net Amount": "$192.00"
+    },
+    {
+      "Menu Item": "Baladin Isaac",
+      "Menu Group": "Beer",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "8",
+      "Net Amount": "$96.00"
+    },
+    {
+      "Menu Item": "QI Burger - L",
+      "Menu Group": "Entrees Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "7",
+      "Net Amount": "$196.00"
+    },
+    {
+      "Menu Item": "Titos RX",
+      "Menu Group": "Vodka",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "7",
+      "Net Amount": "$126.00"
+    },
+    {
+      "Menu Item": "Double Espresso",
+      "Menu Group": "Coffee/Tea",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "7",
+      "Net Amount": "$49.00"
+    },
+    {
+      "Menu Item": "Sprite",
+      "Menu Group": "Water/Soda",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "7",
+      "Net Amount": "$35.00"
+    },
+    {
+      "Menu Item": "Hanger Steak- D",
+      "Menu Group": "Entrees Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "7",
+      "Net Amount": "$315.00"
+    },
+    {
+      "Menu Item": "GL Fessina Erse Etna Bianco",
+      "Menu Group": "White/Rose Glass",
+      "Menu": "WINE",
+      "Item Qty": "7",
+      "Net Amount": "$133.00"
+    },
+    {
+      "Menu Item": "GL Flowers Chardonnay",
+      "Menu Group": "White/Rose Glass",
+      "Menu": "WINE",
+      "Item Qty": "7",
+      "Net Amount": "$182.00"
+    },
+    {
+      "Menu Item": "Angels Envy RYE RX",
+      "Menu Group": "Bourbon/Rye",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "7",
+      "Net Amount": "$161.00"
+    },
+    {
+      "Menu Item": "Jr. Kid's Filet - D",
+      "Menu Group": "Entrees Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "7",
+      "Net Amount": "$203.00"
+    },
+    {
+      "Menu Item": "FIRE MAIN COURSE",
+      "Menu Group": "FIRE COURSE",
+      "Menu": "LUNCH",
+      "Item Qty": "6",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "PICK UP ENTREE NOW",
+      "Menu Group": "FIRE COURSE",
+      "Menu": "LUNCH",
+      "Item Qty": "6",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "Dover Sole - D",
+      "Menu Group": "Entrees Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "6",
+      "Net Amount": "$384.00"
+    },
+    {
+      "Menu Item": "Chicken Alan - D",
+      "Menu Group": "Entrees Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "6",
+      "Net Amount": "$234.00"
+    },
+    {
+      "Menu Item": "GL Campo Costa Barolo",
+      "Menu Group": "Red Glass",
+      "Menu": "WINE",
+      "Item Qty": "6",
+      "Net Amount": "$156.00"
+    },
+    {
+      "Menu Item": "Grey Goose RX",
+      "Menu Group": "Vodka",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "6",
+      "Net Amount": "$108.00"
+    },
+    {
+      "Menu Item": "Club Soda",
+      "Menu Group": "Water/Soda",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "6",
+      "Net Amount": "$30.00"
+    },
+    {
+      "Menu Item": "Botanist UP",
+      "Menu Group": "Gin",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "6",
+      "Net Amount": "$126.00"
+    },
+    {
+      "Menu Item": "Tanqueray UP",
+      "Menu Group": "Gin",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "6",
+      "Net Amount": "$105.00"
+    },
+    {
+      "Menu Item": "Spicy Lobster Rigatoni MC-L",
+      "Menu Group": "Pastas Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "6",
+      "Net Amount": "$318.00"
+    },
+    {
+      "Menu Item": "Pasta Vodka - D",
+      "Menu Group": "Pastas Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "6",
+      "Net Amount": "$156.00"
+    },
+    {
+      "Menu Item": "God Father- D",
+      "Menu Group": "Desserts Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "6",
+      "Net Amount": "$138.00"
+    },
+    {
+      "Menu Item": "Mocktail-Espresso Shakerato",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "6",
+      "Net Amount": "$66.00"
+    },
+    {
+      "Menu Item": "PICK UP NOW",
+      "Menu Group": "FIRE COURSE",
+      "Menu": "LUNCH",
+      "Item Qty": "6",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "Makers Mark RX",
+      "Menu Group": "Bourbon/Rye",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "5",
+      "Net Amount": "$90.00"
+    },
+    {
+      "Menu Item": "Amstel Light",
+      "Menu Group": "Beer",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "5",
+      "Net Amount": "$45.00"
+    },
+    {
+      "Menu Item": "Threes Brewing Ipa",
+      "Menu Group": "Beer",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "5",
+      "Net Amount": "$55.00"
+    },
+    {
+      "Menu Item": "Hendricks RX",
+      "Menu Group": "Gin",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "5",
+      "Net Amount": "$95.00"
+    },
+    {
+      "Menu Item": "Hendricks UP",
+      "Menu Group": "Gin",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "5",
+      "Net Amount": "$110.00"
+    },
+    {
+      "Menu Item": "Truffle Butter Service - D",
+      "Menu Group": "Entrees Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "5",
+      "Net Amount": "$45.00"
+    },
+    {
+      "Menu Item": "Athletic Upside Dawn NA",
+      "Menu Group": "Beer",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "5",
+      "Net Amount": "$40.00"
+    },
+    {
+      "Menu Item": "GL Sartarelli Verdicchio",
+      "Menu Group": "White/Rose Glass",
+      "Menu": "WINE",
+      "Item Qty": "5",
+      "Net Amount": "$90.00"
+    },
+    {
+      "Menu Item": "Tricolore Salad - D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "4",
+      "Net Amount": "$72.00"
+    },
+    {
+      "Menu Item": "Yellowtail Crudo - L",
+      "Menu Group": "Appetizers Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "4",
+      "Net Amount": "$104.00"
+    },
+    {
+      "Menu Item": "Pasta Tomato-L",
+      "Menu Group": "Pastas Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "4",
+      "Net Amount": "$57.00"
+    },
+    {
+      "Menu Item": "Tuscan Fries - L",
+      "Menu Group": "Sides Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "4",
+      "Net Amount": "$51.00"
+    },
+    {
+      "Menu Item": "Coffee",
+      "Menu Group": "Coffee/Tea",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "4",
+      "Net Amount": "$20.00"
+    },
+    {
+      "Menu Item": "Butter",
+      "Menu Group": "Extras Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "4",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "LONG WAIT",
+      "Menu Group": "FIRE COURSE",
+      "Menu": "DINNER",
+      "Item Qty": "4",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "GL Perrier-Jou\u00ebt",
+      "Menu Group": "Sparkling Glass",
+      "Menu": "WINE",
+      "Item Qty": "4",
+      "Net Amount": "$87.00"
+    },
+    {
+      "Menu Item": "NY Strip Steak - L",
+      "Menu Group": "Entrees Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "4",
+      "Net Amount": "$236.00"
+    },
+    {
+      "Menu Item": "Jr. Kid's Filet - L",
+      "Menu Group": "Entrees Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "4",
+      "Net Amount": "$116.00"
+    },
+    {
+      "Menu Item": "Mocktail-Ginger Zinger",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "4",
+      "Net Amount": "$64.00"
+    },
+    {
+      "Menu Item": "Refill Coke",
+      "Menu Group": "Water/Soda",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "4",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "FIRE APPS",
+      "Menu Group": "FIRE COURSE",
+      "Menu": "DINNER",
+      "Item Qty": "3",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "Pasta Butter-D",
+      "Menu Group": "Pastas Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "3",
+      "Net Amount": "$69.00"
+    },
+    {
+      "Menu Item": "Caesar Salad- L",
+      "Menu Group": "Appetizers Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "3",
+      "Net Amount": "$66.00"
+    },
+    {
+      "Menu Item": "Casamigos Reposado RX",
+      "Menu Group": "Tequila",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "3",
+      "Net Amount": "$60.00"
+    },
+    {
+      "Menu Item": "Don Julio Reposado RX",
+      "Menu Group": "Tequila",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "3",
+      "Net Amount": "$60.00"
+    },
+    {
+      "Menu Item": "Ketel One RX",
+      "Menu Group": "Vodka",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "3",
+      "Net Amount": "$54.00"
+    },
+    {
+      "Menu Item": "Woodford RX",
+      "Menu Group": "Bourbon/Rye",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "3",
+      "Net Amount": "$57.00"
+    },
+    {
+      "Menu Item": "Roman-Classic Salad-L",
+      "Menu Group": "Chopped Salads Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "3",
+      "Net Amount": "$72.00"
+    },
+    {
+      "Menu Item": "Oyster East Coast - D",
+      "Menu Group": "Shellfish Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "3",
+      "Net Amount": "$15.00"
+    },
+    {
+      "Menu Item": "Fior di Latte - D",
+      "Menu Group": "Desserts Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "3",
+      "Net Amount": "$24.00"
+    },
+    {
+      "Menu Item": "Chicken Parm MC-L",
+      "Menu Group": "Chicken Parm Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "3",
+      "Net Amount": "$258.00"
+    },
+    {
+      "Menu Item": "Mafaldine MC-L",
+      "Menu Group": "Pastas Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "3",
+      "Net Amount": "$64.00"
+    },
+    {
+      "Menu Item": "GL Routestock Chard",
+      "Menu Group": "White/Rose Glass",
+      "Menu": "WINE",
+      "Item Qty": "3",
+      "Net Amount": "$57.00"
+    },
+    {
+      "Menu Item": "GL Faust Cabernet Sauvignon",
+      "Menu Group": "Red Glass",
+      "Menu": "WINE",
+      "Item Qty": "3",
+      "Net Amount": "$105.00"
+    },
+    {
+      "Menu Item": "GL Chiarlo Moscato",
+      "Menu Group": "Dessert Glass",
+      "Menu": "WINE",
+      "Item Qty": "3",
+      "Net Amount": "$45.00"
+    },
+    {
+      "Menu Item": "Fusilli alla Manzo APP - L",
+      "Menu Group": "Pastas Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "3",
+      "Net Amount": "$102.00"
+    },
+    {
+      "Menu Item": "Our Shellfish Tower- D",
+      "Menu Group": "Shellfish Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "3",
+      "Net Amount": "$495.00"
+    },
+    {
+      "Menu Item": "Lonardo Riserva Contrade Taurasi",
+      "Menu Group": "Red Bottle",
+      "Menu": "WINE",
+      "Item Qty": "3",
+      "Net Amount": "$675.00"
+    },
+    {
+      "Menu Item": "Gramercy Cellars Lower East Cabernet",
+      "Menu Group": "Red Bottle",
+      "Menu": "WINE",
+      "Item Qty": "3",
+      "Net Amount": "$285.00"
+    },
+    {
+      "Menu Item": "%Weekend Mazzei Philip Toscana",
+      "Menu Group": "Red Bottle",
+      "Menu": "WINE",
+      "Item Qty": "3",
+      "Net Amount": "$405.00"
+    },
+    {
+      "Menu Item": "Limoncello Spritz",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "3",
+      "Net Amount": "$54.00"
+    },
+    {
+      "Menu Item": "U7 Shrimp 4- D",
+      "Menu Group": "Shellfish Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "2",
+      "Net Amount": "$64.00"
+    },
+    {
+      "Menu Item": "Scallop Crudo -D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "2",
+      "Net Amount": "$38.00"
+    },
+    {
+      "Menu Item": "Pasta Plain - D",
+      "Menu Group": "Pastas Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "2",
+      "Net Amount": "$38.00"
+    },
+    {
+      "Menu Item": "Calamari Casino- L",
+      "Menu Group": "Appetizers Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "2",
+      "Net Amount": "$46.00"
+    },
+    {
+      "Menu Item": "Corn Brulee- L",
+      "Menu Group": "Sides Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "2",
+      "Net Amount": "$38.00"
+    },
+    {
+      "Menu Item": "Schramsberg Blanc de Noirs Brut",
+      "Menu Group": "Sparkling Bottle",
+      "Menu": "WINE",
+      "Item Qty": "2",
+      "Net Amount": "$220.00"
+    },
+    {
+      "Menu Item": "Laphraoig 10 RX",
+      "Menu Group": "Scotch",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "2",
+      "Net Amount": "$40.00"
+    },
+    {
+      "Menu Item": "Crown Royal RX",
+      "Menu Group": "Bourbon/Rye",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "2",
+      "Net Amount": "$36.00"
+    },
+    {
+      "Menu Item": "Michters Bourbon UP",
+      "Menu Group": "Bourbon/Rye",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "2",
+      "Net Amount": "$42.00"
+    },
+    {
+      "Menu Item": "Cranberry Juice",
+      "Menu Group": "Water/Soda",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "2",
+      "Net Amount": "$12.00"
+    },
+    {
+      "Menu Item": "Gingerale",
+      "Menu Group": "Water/Soda",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "2",
+      "Net Amount": "$10.00"
+    },
+    {
+      "Menu Item": "Milk",
+      "Menu Group": "Water/Soda",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "2",
+      "Net Amount": "$12.00"
+    },
+    {
+      "Menu Item": "Candolini Grappa",
+      "Menu Group": "Other Liquors",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "2",
+      "Net Amount": "$30.00"
+    },
+    {
+      "Menu Item": "Meatballs-L",
+      "Menu Group": "Appetizers Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "2",
+      "Net Amount": "$46.00"
+    },
+    {
+      "Menu Item": "Ferrero Rocher-L",
+      "Menu Group": "Desserts Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "2",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "WAIT FOR PICK UP",
+      "Menu Group": "FIRE COURSE",
+      "Menu": "DINNER",
+      "Item Qty": "2",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "Tuscan-Tuna-L",
+      "Menu Group": "Chopped Salads Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "2",
+      "Net Amount": "$74.00"
+    },
+    {
+      "Menu Item": "Hawaiian Chicken Parm MC-D",
+      "Menu Group": "Chicken Parm Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "2",
+      "Net Amount": "$180.00"
+    },
+    {
+      "Menu Item": "Focaccia",
+      "Menu Group": "Extras Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "2",
+      "Net Amount": "$8.00"
+    },
+    {
+      "Menu Item": "Paccheri Amatriciana APP-L",
+      "Menu Group": "Pastas Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "2",
+      "Net Amount": "$68.00"
+    },
+    {
+      "Menu Item": "Paccheri Amatriciana MC-L",
+      "Menu Group": "Pastas Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "2",
+      "Net Amount": "$68.00"
+    },
+    {
+      "Menu Item": "Jr. Kid's Chicken Fingers - L",
+      "Menu Group": "Entrees Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "2",
+      "Net Amount": "$42.00"
+    },
+    {
+      "Menu Item": "Fusilli alla Manzo MC - L",
+      "Menu Group": "Pastas Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "2",
+      "Net Amount": "$34.00"
+    },
+    {
+      "Menu Item": "Cleto Chiarli Lambrusco",
+      "Menu Group": "Sparkling Bottle",
+      "Menu": "WINE",
+      "Item Qty": "2",
+      "Net Amount": "$140.00"
+    },
+    {
+      "Menu Item": "GL Ronchi di Cialla Schioppettino",
+      "Menu Group": "Red Glass",
+      "Menu": "WINE",
+      "Item Qty": "2",
+      "Net Amount": "$34.00"
+    },
+    {
+      "Menu Item": "#Marguerite Symphonie Rose",
+      "Menu Group": "White/Rose Bottle",
+      "Menu": "WINE",
+      "Item Qty": "2",
+      "Net Amount": "$190.00"
+    },
+    {
+      "Menu Item": "Black Truffle Cacio Pepe MC- L",
+      "Menu Group": "Pastas Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "2",
+      "Net Amount": "$90.00"
+    },
+    {
+      "Menu Item": "GL Yamile Muri NA",
+      "Menu Group": "Sparkling Glass",
+      "Menu": "WINE",
+      "Item Qty": "2",
+      "Net Amount": "$34.00"
+    },
+    {
+      "Menu Item": "Reserva de la Familia Extra Anejo UP",
+      "Menu Group": "Tequila",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "2",
+      "Net Amount": "$80.00"
+    },
+    {
+      "Menu Item": "**VIP Osetra Caviar Gnocchi",
+      "Menu Group": "Pastas Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "2",
+      "Net Amount": "$98.00"
+    },
+    {
+      "Menu Item": "U7 Shrimp 3 - D",
+      "Menu Group": "Shellfish Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "2",
+      "Net Amount": "$48.00"
+    },
+    {
+      "Menu Item": "Salmon Crudo - D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "2",
+      "Net Amount": "$48.00"
+    },
+    {
+      "Menu Item": "FIRE MID COURSE #1",
+      "Menu Group": "FIRE COURSE",
+      "Menu": "DINNER",
+      "Item Qty": "1",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "Lobster Pasta APP-D",
+      "Menu Group": "Pastas Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "1",
+      "Net Amount": "$53.00"
+    },
+    {
+      "Menu Item": "Tricolore Salad- L",
+      "Menu Group": "Appetizers Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$18.00"
+    },
+    {
+      "Menu Item": "Spicy Lobster Rigatoni APP - L",
+      "Menu Group": "Pastas Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$53.00"
+    },
+    {
+      "Menu Item": "Pasta Butter - L",
+      "Menu Group": "Pastas Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$19.00"
+    },
+    {
+      "Menu Item": "Filet Classic - L",
+      "Menu Group": "Entrees Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$64.00"
+    },
+    {
+      "Menu Item": "Brocoli Rabe- L",
+      "Menu Group": "Sides Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$16.00"
+    },
+    {
+      "Menu Item": "Spinach - L",
+      "Menu Group": "Sides Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$16.00"
+    },
+    {
+      "Menu Item": "Cakebread Sauvignon Blanc",
+      "Menu Group": "White/Rose Bottle",
+      "Menu": "WINE",
+      "Item Qty": "1",
+      "Net Amount": "$98.00"
+    },
+    {
+      "Menu Item": "Dewars WHITE RX",
+      "Menu Group": "Scotch",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$18.00"
+    },
+    {
+      "Menu Item": "Macallan 12 RX",
+      "Menu Group": "Scotch",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$25.00"
+    },
+    {
+      "Menu Item": "Don Julio Reposado UP",
+      "Menu Group": "Tequila",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$23.00"
+    },
+    {
+      "Menu Item": "Angel's Envy RX",
+      "Menu Group": "Bourbon/Rye",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$19.00"
+    },
+    {
+      "Menu Item": "Angel's Envy UP",
+      "Menu Group": "Bourbon/Rye",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$22.00"
+    },
+    {
+      "Menu Item": "Jameson RX",
+      "Menu Group": "Bourbon/Rye",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$18.00"
+    },
+    {
+      "Menu Item": "Knob Creek RX",
+      "Menu Group": "Bourbon/Rye",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$18.00"
+    },
+    {
+      "Menu Item": "Whistle Pig 15 RX",
+      "Menu Group": "Bourbon/Rye",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$30.00"
+    },
+    {
+      "Menu Item": "Whistle Pig 10 RX",
+      "Menu Group": "Bourbon/Rye",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$23.00"
+    },
+    {
+      "Menu Item": "Heineken",
+      "Menu Group": "Beer",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$9.00"
+    },
+    {
+      "Menu Item": "Decaf Coffee",
+      "Menu Group": "Coffee/Tea",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$5.00"
+    },
+    {
+      "Menu Item": "Decaf Cappuccino",
+      "Menu Group": "Coffee/Tea",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$7.00"
+    },
+    {
+      "Menu Item": "Arnold Palmer",
+      "Menu Group": "Water/Soda",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$6.00"
+    },
+    {
+      "Menu Item": "Orange Juice",
+      "Menu Group": "Water/Soda",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$6.00"
+    },
+    {
+      "Menu Item": "Tanqueray RX",
+      "Menu Group": "Gin",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$18.00"
+    },
+    {
+      "Menu Item": "Sambuca Lazzaroni",
+      "Menu Group": "Other Liquors",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$15.00"
+    },
+    {
+      "Menu Item": "Meatballs-L",
+      "Menu Group": "Sides Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$23.00"
+    },
+    {
+      "Menu Item": "Roman-Grilled Chicken-L",
+      "Menu Group": "Chopped Salads Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$34.00"
+    },
+    {
+      "Menu Item": "Roman-Pepper Filet-L",
+      "Menu Group": "Chopped Salads Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$39.00"
+    },
+    {
+      "Menu Item": "Tuscan-Pepper Filet-L",
+      "Menu Group": "Chopped Salads Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$37.00"
+    },
+    {
+      "Menu Item": "Campania-Grilled Chicken-L",
+      "Menu Group": "Chopped Salads Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$35.00"
+    },
+    {
+      "Menu Item": "Campania-Pepper Filet-L",
+      "Menu Group": "Chopped Salads Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$40.00"
+    },
+    {
+      "Menu Item": "New York-Grilled Chicken-L",
+      "Menu Group": "Chopped Salads Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$36.00"
+    },
+    {
+      "Menu Item": "Sliced Avocado",
+      "Menu Group": "Extras Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$6.00"
+    },
+    {
+      "Menu Item": "Mimosa",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$17.00"
+    },
+    {
+      "Menu Item": "Melted Gorgonzola",
+      "Menu Group": "Extras Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "1",
+      "Net Amount": "$5.00"
+    },
+    {
+      "Menu Item": "Monkey 47 UP",
+      "Menu Group": "Gin",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$26.00"
+    },
+    {
+      "Menu Item": "Kistler Les Noisetiers Sonoma Coast Chardonnay",
+      "Menu Group": "White/Rose Bottle",
+      "Menu": "WINE",
+      "Item Qty": "1",
+      "Net Amount": "$165.00"
+    },
+    {
+      "Menu Item": "Paccheri Amatriciana APP-D",
+      "Menu Group": "Pastas Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "1",
+      "Net Amount": "$34.00"
+    },
+    {
+      "Menu Item": "Hugo Spritz",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$18.00"
+    },
+    {
+      "Menu Item": "Tomato & Stracciatella - L",
+      "Menu Group": "Appetizers Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$25.00"
+    },
+    {
+      "Menu Item": "Chicken Parm APP-L",
+      "Menu Group": "Chicken Parm Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$86.00"
+    },
+    {
+      "Menu Item": "Tuna & Avocado Carpaccio-L",
+      "Menu Group": "Appetizers Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$32.00"
+    },
+    {
+      "Menu Item": "Hanger Steak - L",
+      "Menu Group": "Entrees Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$45.00"
+    },
+    {
+      "Menu Item": "Flowers Pinot Noir Sonoma Coast",
+      "Menu Group": "Red Bottle",
+      "Menu": "WINE",
+      "Item Qty": "1",
+      "Net Amount": "$138.00"
+    },
+    {
+      "Menu Item": "Altesino Brunello di Montalcino",
+      "Menu Group": "Red Bottle",
+      "Menu": "WINE",
+      "Item Qty": "1",
+      "Net Amount": "$160.00"
+    },
+    {
+      "Menu Item": "Frank Family Cabernet Napa",
+      "Menu Group": "Red Bottle",
+      "Menu": "WINE",
+      "Item Qty": "1",
+      "Net Amount": "$138.00"
+    },
+    {
+      "Menu Item": "Jr. Kid's Pasta Butter - D",
+      "Menu Group": "Entrees Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "1",
+      "Net Amount": "$19.00"
+    },
+    {
+      "Menu Item": "Jr. Kid's Pasta Tomato - D",
+      "Menu Group": "Entrees Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "1",
+      "Net Amount": "$19.00"
+    },
+    {
+      "Menu Item": "Jr. Kid's Pasta Butter - L",
+      "Menu Group": "Entrees Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$19.00"
+    },
+    {
+      "Menu Item": "Jr. Kid's Pasta Tomato - L",
+      "Menu Group": "Entrees Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$19.00"
+    },
+    {
+      "Menu Item": "Allegrini Amarone delle Valpolicella",
+      "Menu Group": "Red Bottle",
+      "Menu": "WINE",
+      "Item Qty": "1",
+      "Net Amount": "$170.00"
+    },
+    {
+      "Menu Item": "Fusilli alla Manzo APP - D",
+      "Menu Group": "Pastas Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "1",
+      "Net Amount": "$34.00"
+    },
+    {
+      "Menu Item": "Lobster Toast MC - D",
+      "Menu Group": "Appetizers Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "1",
+      "Net Amount": "$38.00"
+    },
+    {
+      "Menu Item": "#Lilou Sauvignon Blanc",
+      "Menu Group": "White/Rose Bottle",
+      "Menu": "WINE",
+      "Item Qty": "1",
+      "Net Amount": "$80.00"
+    },
+    {
+      "Menu Item": "Eyrie The Eyrie Pinot Noir",
+      "Menu Group": "Red Bottle",
+      "Menu": "WINE",
+      "Item Qty": "1",
+      "Net Amount": "$235.00"
+    },
+    {
+      "Menu Item": "Donnatella Cinelli Colombini Cenerentola",
+      "Menu Group": "Red Bottle",
+      "Menu": "WINE",
+      "Item Qty": "1",
+      "Net Amount": "$135.00"
+    },
+    {
+      "Menu Item": "Chocolate Olive Oil Cake- L",
+      "Menu Group": "Desserts Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$21.00"
+    },
+    {
+      "Menu Item": "**VIP Dusty Negroni",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "*Gaja Sito Moresco 375ml",
+      "Menu Group": "Half Bottle",
+      "Menu": "WINE",
+      "Item Qty": "1",
+      "Net Amount": "$90.00"
+    },
+    {
+      "Menu Item": "Mocktail-Aranciata",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$9.00"
+    },
+    {
+      "Menu Item": "Del Maguey Vida UP",
+      "Menu Group": "Tequila",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$21.00"
+    },
+    {
+      "Menu Item": "Whipped Ricotta - L",
+      "Menu Group": "Appetizers Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$21.00"
+    },
+    {
+      "Menu Item": "Domaine Leflaive Puligny Montrachet 2019",
+      "Menu Group": "White/Rose Bottle",
+      "Menu": "WINE",
+      "Item Qty": "1",
+      "Net Amount": "$650.00"
+    },
+    {
+      "Menu Item": "Masciarelli Marina Cvetic Montepulciano d'Abruzzo",
+      "Menu Group": "Red Bottle",
+      "Menu": "WINE",
+      "Item Qty": "1",
+      "Net Amount": "$96.00"
+    },
+    {
+      "Menu Item": "Vodka Parm MC",
+      "Menu Group": "Chicken Parm Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "Vodka Chicken Parm MC-D",
+      "Menu Group": "Chicken Parm Dinner",
+      "Menu": "DINNER",
+      "Item Qty": "1",
+      "Net Amount": "$90.00"
+    },
+    {
+      "Menu Item": "%Weekend Ducru-Beaucaillou La Croix",
+      "Menu Group": "Red Bottle",
+      "Menu": "WINE",
+      "Item Qty": "1",
+      "Net Amount": "$118.00"
+    },
+    {
+      "Menu Item": "%Weekend Jordan Chardonnay",
+      "Menu Group": "White/Rose Bottle",
+      "Menu": "WINE",
+      "Item Qty": "1",
+      "Net Amount": "$89.00"
+    },
+    {
+      "Menu Item": "Agnolotti Porterhouse MC-L",
+      "Menu Group": "Pastas Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$44.00"
+    },
+    {
+      "Menu Item": "GL Summer Water Rose",
+      "Menu Group": "White/Rose Glass",
+      "Menu": "WINE",
+      "Item Qty": "1",
+      "Net Amount": "$17.00"
+    },
+    {
+      "Menu Item": "Mocktail-Virgin Mojito",
+      "Menu Group": "Cocktails & After Dinners",
+      "Menu": "LIQUOR/BEER/NA BEV",
+      "Item Qty": "1",
+      "Net Amount": "$9.00"
+    },
+    {
+      "Menu Item": "Pasta Vodka - L",
+      "Menu Group": "Pastas Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "1",
+      "Net Amount": "$26.00"
+    },
+    {
+      "Menu Item": "Tuscan-Classic Salad-L",
+      "Menu Group": "Chopped Salads Lunch",
+      "Menu": "LUNCH",
+      "Item Qty": "0",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "Barbi Brunello di Montalcino",
+      "Menu Group": "Red Bottle",
+      "Menu": "WINE",
+      "Item Qty": "0",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "Open Food",
+      "Menu Group": "Open Food",
+      "Menu": "No Menu",
+      "Item Qty": "0",
+      "Net Amount": "$0.00"
+    }
+  ],
+  "checks": []
+}

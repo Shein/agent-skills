@@ -2488,7 +2488,7 @@ def normalize_payment_type(value: Any) -> str | None:
     return text
 
 
-_INACTIVE_PAYMENT_STATUSES = frozenset({"DENIED", "VOIDED"})
+_INACTIVE_PAYMENT_STATUSES = frozenset({"DENIED", "VOIDED", "CANCELLED"})
 
 
 def _is_active_payment(payment: dict[str, Any]) -> bool:
@@ -2851,10 +2851,11 @@ def validate_detail_payload(mapped: dict[str, Any]) -> list[str]:
     payments = mapped.get("payments") or []
 
     # Total formula: subtotal is already post-discount, so do NOT subtract discount again.
-    # Skip for comped checks where total=0 but subtotal>0 or tip>0 (pre-comp payment capture).
+    # Skip for comped checks where total=0 but subtotal/tip/gratuity>0 (pre-comp payment capture).
     is_comped = (total is not None and abs(total) < 0.005
                  and ((subtotal is not None and subtotal > 0.5)
-                      or (tip is not None and tip > 0.5)))
+                      or (tip is not None and tip > 0.5)
+                      or (gratuity is not None and gratuity > 0.5)))
     if not is_comped:
         if subtotal is not None and tax is not None and tip is not None and gratuity is not None and total is not None:
             expected = round(subtotal + tax + tip + gratuity, 2)
