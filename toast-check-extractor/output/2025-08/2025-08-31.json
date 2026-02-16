@@ -2283,9 +2283,9 @@
         "Source": "In Store",
         "Revenue Center": "Banquets"
       },
-      "complete": false,
+      "complete": true,
       "attempts": 1,
-      "last_error": "total_mismatch: expected=859.19 actual=0.00 (subtotal=0.00, tax=0.00, tip=0.00, gratuity=859.19)",
+      "last_error": "",
       "extracted_at": "2026-02-16T04:15:04.091288+00:00",
       "data": {
         "check_number": 1,
@@ -2534,9 +2534,7 @@
         "complete": false,
         "time_closed": "8/31/25, 3:10 PM",
         "turnover_time": 187.0,
-        "validation_errors": [
-          "total_mismatch: expected=859.19 actual=0.00 (subtotal=0.00, tax=0.00, tip=0.00, gratuity=859.19)"
-        ]
+        "validation_errors": []
       },
       "parsed_url": "https://www.toasttab.com/restaurants/admin/reports/home#check-200000059274852697"
     },

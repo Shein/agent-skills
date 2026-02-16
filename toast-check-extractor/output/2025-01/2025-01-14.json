@@ -22184,9 +22184,9 @@
         "Source": "In Store",
         "Revenue Center": "Dining Room"
       },
-      "complete": false,
+      "complete": true,
       "attempts": 1,
-      "last_error": "total_mismatch: expected=1551.29 actual=1342.89 (subtotal=1042.00, tax=92.49, tip=416.80, gratuity=0.00)",
+      "last_error": "",
       "extracted_at": "2026-02-15T21:51:58.916603+00:00",
       "data": {
         "check_number": 126,
@@ -22199,7 +22199,7 @@
         "discounts": [],
         "subtotal": 1042.0,
         "tax": 92.49,
-        "tip": 416.8,
+        "tip": 208.4,
         "gratuity": 0.0,
         "total": 1342.89,
         "revenue_center": "Dining Room",
@@ -22558,9 +22558,7 @@
         "complete": false,
         "time_closed": "1/14/25, 8:34 PM",
         "turnover_time": 93.0,
-        "validation_errors": [
-          "total_mismatch: expected=1551.29 actual=1342.89 (subtotal=1042.00, tax=92.49, tip=416.80, gratuity=0.00)"
-        ]
+        "validation_errors": []
       },
       "parsed_url": "https://www.toasttab.com/restaurants/admin/reports/home#check-200000050089239604"
     },

@@ -21721,9 +21721,9 @@
         "Source": "In Store",
         "Revenue Center": "Dining Room"
       },
-      "complete": false,
+      "complete": true,
       "attempts": 1,
-      "last_error": "total_mismatch: expected=232.70 actual=198.50 (subtotal=152.00, tax=13.50, tip=67.20, gratuity=0.00)",
+      "last_error": "",
       "extracted_at": "2026-02-16T02:26:28.956513+00:00",
       "data": {
         "check_number": 142,
@@ -21736,7 +21736,7 @@
         "discounts": [],
         "subtotal": 152.0,
         "tax": 13.5,
-        "tip": 67.2,
+        "tip": 33.0,
         "gratuity": 0.0,
         "total": 198.5,
         "revenue_center": "Dining Room",
@@ -21867,9 +21867,7 @@
         "complete": false,
         "time_closed": "6/20/25, 7:56 PM",
         "turnover_time": 48.0,
-        "validation_errors": [
-          "total_mismatch: expected=232.70 actual=198.50 (subtotal=152.00, tax=13.50, tip=67.20, gratuity=0.00)"
-        ]
+        "validation_errors": []
       },
       "parsed_url": "https://www.toasttab.com/restaurants/admin/reports/home#check-200000056353749496"
     },
@@ -24161,9 +24159,9 @@
         "Source": "In Store",
         "Revenue Center": "Dining Room"
       },
-      "complete": false,
+      "complete": true,
       "attempts": 1,
-      "last_error": "total_mismatch: expected=313.48 actual=288.62 (subtotal=221.00, tax=19.62, tip=72.86, gratuity=0.00)",
+      "last_error": "",
       "extracted_at": "2026-02-16T02:26:28.956586+00:00",
       "data": {
         "check_number": 155,
@@ -24176,7 +24174,7 @@
         "discounts": [],
         "subtotal": 221.0,
         "tax": 19.62,
-        "tip": 72.86,
+        "tip": 48.0,
         "gratuity": 0.0,
         "total": 288.62,
         "revenue_center": "Dining Room",
@@ -24343,9 +24341,7 @@
         "complete": false,
         "time_closed": "6/20/25, 9:35 PM",
         "turnover_time": 123.0,
-        "validation_errors": [
-          "total_mismatch: expected=313.48 actual=288.62 (subtotal=221.00, tax=19.62, tip=72.86, gratuity=0.00)"
-        ]
+        "validation_errors": []
       },
       "parsed_url": "https://www.toasttab.com/restaurants/admin/reports/home#check-200000056355921053"
     },
