@@ -1,0 +1,213 @@
+Party Size,Meal Period,Day,Season,Sample Size,Avg Spend ($),Avg Spend/Person ($),Avg Time (min),Avg Starters,Avg Mains,Avg Sides,Avg Desserts,Avg Alcohol,Avg Non-Alc
+Couple,Afternoon,Friday,Spring,57,155.63,77.82,52,1.3,1.4,0.4,0.4,1.6,0.5
+Couple,Afternoon,Friday,Winter,52,212.13,106.07,66,2.3,2.1,0.3,0.2,2.2,0.5
+Couple,Brunch,Friday,Spring,201,174.59,87.30,64,2.2,2.3,0.4,0.2,1.3,0.9
+Couple,Brunch,Friday,Winter,268,191.84,95.92,65,2.1,2.4,0.3,0.2,1.5,0.8
+Couple,Brunch,Friday,Fall,205,174.36,87.18,64,2.1,2.2,0.3,0.1,1.3,0.9
+Couple,Brunch,Friday,Summer,147,155.42,77.71,58,1.9,2.1,0.3,0.1,1.2,0.9
+Couple,Brunch,Saturday,Winter,206,201.17,100.59,68,2.2,2.5,0.3,0.4,1.4,0.8
+Couple,Brunch,Saturday,Spring,173,175.88,87.94,60,2.2,2.3,0.4,0.3,1.2,0.7
+Couple,Brunch,Saturday,Summer,172,150.18,75.09,58,2.0,2.1,0.3,0.2,1.1,0.7
+Couple,Brunch,Saturday,Fall,165,164.53,82.26,59,2.1,2.2,0.3,0.2,1.2,0.7
+Couple,Dinner,Sunday,Summer,456,241.09,120.54,81,2.3,2.7,0.6,0.4,1.8,0.6
+Couple,Dinner,Sunday,Winter,562,238.81,119.40,81,2.2,2.7,0.6,0.4,1.7,0.6
+Couple,Dinner,Sunday,Spring,447,241.30,120.65,81,2.3,2.7,0.5,0.4,1.7,0.6
+Couple,Dinner,Sunday,Fall,562,244.74,122.37,81,2.2,2.8,0.7,0.4,1.8,0.6
+Couple,Dinner,Monday,Summer,457,249.14,124.57,81,2.3,2.7,0.6,0.3,1.8,0.5
+Couple,Dinner,Monday,Fall,576,253.21,126.60,82,2.3,2.8,0.6,0.3,2.0,0.6
+Couple,Dinner,Monday,Winter,606,248.06,124.03,84,2.3,2.8,0.6,0.4,1.7,0.6
+Couple,Dinner,Monday,Spring,578,250.40,125.20,80,2.2,2.8,0.6,0.4,1.8,0.5
+Couple,Dinner,Tuesday,Fall,611,248.09,124.04,79,2.2,2.8,0.6,0.4,1.9,0.5
+Couple,Dinner,Tuesday,Summer,528,238.12,119.06,79,2.2,2.7,0.6,0.3,1.8,0.6
+Couple,Dinner,Tuesday,Spring,708,252.33,126.17,82,2.3,2.7,0.6,0.4,1.8,0.6
+Couple,Dinner,Tuesday,Winter,712,254.70,127.35,85,2.3,2.8,0.6,0.4,1.8,0.5
+Couple,Dinner,Wednesday,Summer,599,242.79,121.40,79,2.2,2.7,0.6,0.4,1.8,0.5
+Couple,Dinner,Wednesday,Fall,669,240.13,120.06,82,2.2,2.7,0.6,0.3,1.9,0.6
+Couple,Dinner,Wednesday,Spring,667,258.28,129.14,83,2.3,2.8,0.5,0.4,1.8,0.5
+Couple,Dinner,Wednesday,Winter,764,243.48,121.74,82,2.2,2.7,0.6,0.4,1.8,0.5
+Couple,Dinner,Thursday,Summer,711,229.59,114.79,79,2.3,2.8,0.5,0.4,1.7,0.5
+Couple,Dinner,Thursday,Fall,920,233.52,116.76,77,2.1,2.7,0.6,0.4,1.8,0.5
+Couple,Dinner,Thursday,Winter,1276,233.42,116.71,82,2.2,2.7,0.5,0.4,1.9,0.5
+Couple,Dinner,Thursday,Spring,885,244.50,122.25,81,2.3,2.7,0.5,0.4,2.0,0.5
+Couple,Dinner,Friday,Spring,1041,233.57,116.79,78,2.2,2.7,0.6,0.4,1.8,0.5
+Couple,Dinner,Friday,Winter,1152,233.69,116.84,79,2.1,2.7,0.5,0.4,1.9,0.6
+Couple,Dinner,Friday,Fall,981,239.89,119.94,79,2.3,2.8,0.6,0.3,1.9,0.6
+Couple,Dinner,Friday,Summer,810,224.10,112.05,78,2.2,2.8,0.6,0.4,1.7,0.6
+Couple,Dinner,Saturday,Spring,573,234.71,117.36,82,2.2,2.7,0.6,0.4,1.6,0.6
+Couple,Dinner,Saturday,Summer,627,221.38,110.69,76,2.2,2.8,0.6,0.4,1.5,0.7
+Couple,Dinner,Saturday,Winter,768,236.50,118.25,83,2.2,2.8,0.6,0.5,1.6,0.6
+Couple,Dinner,Saturday,Fall,601,227.80,113.90,77,2.2,2.7,0.5,0.4,1.7,0.7
+Couple,Late Night,Thursday,Winter,139,203.93,101.96,69,2.0,2.7,0.4,0.2,1.5,0.4
+Couple,Late Night,Thursday,Spring,88,210.17,105.08,59,2.0,2.6,0.5,0.3,1.5,0.6
+Couple,Late Night,Thursday,Summer,74,201.59,100.79,58,1.9,2.4,0.4,0.2,1.5,0.6
+Couple,Late Night,Thursday,Fall,99,206.28,103.14,63,2.0,2.7,0.5,0.2,1.5,0.6
+Couple,Late Night,Friday,Spring,91,210.67,105.34,62,2.0,2.6,0.4,0.3,1.5,0.4
+Couple,Late Night,Friday,Winter,89,212.98,106.49,67,2.3,2.6,0.4,0.3,1.4,0.6
+Couple,Late Night,Friday,Fall,64,222.44,111.22,61,2.1,2.8,0.5,0.3,1.4,0.6
+Couple,Late Night,Friday,Summer,60,199.43,99.71,60,2.1,2.7,0.5,0.2,1.2,0.6
+Couple,Lunch,Sunday,Winter,188,164.58,82.29,61,2.3,2.0,0.3,0.1,0.8,1.0
+Couple,Lunch,Sunday,Fall,162,157.71,78.85,60,2.2,2.0,0.3,0.1,0.9,1.1
+Couple,Lunch,Sunday,Summer,117,150.00,75.00,59,2.4,1.9,0.3,0.2,0.7,0.9
+Couple,Lunch,Sunday,Spring,125,149.76,74.88,58,2.2,1.9,0.3,0.1,0.6,1.0
+Couple,Lunch,Monday,Winter,223,168.52,84.26,63,2.3,2.0,0.3,0.1,0.8,1.1
+Couple,Lunch,Monday,Summer,171,161.22,80.61,57,2.3,2.1,0.3,0.1,0.8,1.0
+Couple,Lunch,Monday,Spring,183,158.76,79.38,60,2.3,2.0,0.3,0.1,0.6,1.3
+Couple,Lunch,Monday,Fall,176,156.79,78.39,58,2.4,2.1,0.3,0.1,0.7,1.1
+Couple,Lunch,Tuesday,Spring,222,151.16,75.58,60,2.4,1.9,0.4,0.1,0.6,1.0
+Couple,Lunch,Tuesday,Fall,210,151.05,75.52,60,2.2,1.9,0.3,0.1,0.6,1.2
+Couple,Lunch,Tuesday,Winter,287,162.73,81.36,62,2.3,2.1,0.4,0.1,0.7,1.2
+Couple,Lunch,Tuesday,Summer,189,160.45,80.22,62,2.4,1.9,0.3,0.1,0.6,1.1
+Couple,Lunch,Wednesday,Summer,199,167.83,83.91,60,2.5,2.0,0.3,0.1,0.9,1.0
+Couple,Lunch,Wednesday,Spring,210,165.29,82.65,61,2.4,2.1,0.3,0.2,0.6,1.1
+Couple,Lunch,Wednesday,Fall,210,161.21,80.61,59,2.4,2.1,0.3,0.1,0.8,1.0
+Couple,Lunch,Wednesday,Winter,285,165.31,82.65,62,2.1,2.2,0.3,0.1,0.7,1.1
+Couple,Lunch,Thursday,Spring,169,163.15,81.58,63,2.2,2.2,0.3,0.2,1.1,1.0
+Couple,Lunch,Thursday,Winter,214,182.90,91.45,66,2.1,2.3,0.3,0.1,1.1,0.9
+Couple,Lunch,Thursday,Fall,187,172.77,86.39,63,2.1,2.3,0.4,0.1,1.1,1.0
+Couple,Lunch,Thursday,Summer,165,149.35,74.67,56,2.1,2.1,0.2,0.1,1.2,0.8
+Large Group,Brunch,Friday,Fall,62,433.85,74.10,78,3.5,4.8,1.0,0.4,2.2,1.9
+Large Group,Brunch,Friday,Winter,90,478.35,82.16,89,3.7,4.9,0.7,0.5,2.7,1.9
+Large Group,Brunch,Saturday,Spring,60,505.53,89.47,90,3.8,5.1,1.2,0.7,2.8,1.8
+Large Group,Brunch,Saturday,Winter,90,482.72,81.66,85,3.7,5.0,0.9,0.7,2.8,1.9
+Large Group,Dinner,Sunday,Spring,127,849.94,141.84,118,4.0,5.9,1.9,1.4,4.2,1.3
+Large Group,Dinner,Sunday,Winter,163,772.00,129.73,113,4.1,6.0,1.6,1.3,4.1,1.7
+Large Group,Dinner,Sunday,Summer,160,803.71,134.23,114,3.9,5.9,1.9,1.1,4.6,1.7
+Large Group,Dinner,Sunday,Fall,174,784.28,130.34,113,4.0,6.0,1.7,1.1,4.3,1.6
+Large Group,Dinner,Monday,Spring,184,904.17,150.56,117,4.2,6.2,1.8,1.1,5.7,1.3
+Large Group,Dinner,Monday,Fall,202,822.35,140.18,107,4.0,6.0,1.6,1.0,4.8,1.5
+Large Group,Dinner,Monday,Summer,186,831.84,138.39,113,4.0,6.1,1.8,1.1,4.7,1.4
+Large Group,Dinner,Monday,Winter,229,880.72,144.27,112,4.0,6.0,1.7,1.3,4.8,1.5
+Large Group,Dinner,Tuesday,Fall,187,895.20,149.47,108,3.9,6.0,1.7,1.1,5.1,1.2
+Large Group,Dinner,Tuesday,Summer,158,832.46,142.97,113,3.8,5.7,1.5,1.4,5.0,1.4
+Large Group,Dinner,Tuesday,Winter,242,839.95,140.38,114,4.0,6.2,1.6,1.3,4.8,1.6
+Large Group,Dinner,Tuesday,Spring,182,906.96,151.44,116,4.1,6.2,1.7,1.4,5.0,1.6
+Large Group,Dinner,Wednesday,Fall,195,884.84,146.10,117,4.3,6.2,1.7,1.3,5.1,1.3
+Large Group,Dinner,Wednesday,Winter,250,790.48,132.36,112,3.9,6.1,1.5,1.1,4.7,1.5
+Large Group,Dinner,Wednesday,Summer,173,723.89,123.63,107,3.6,5.8,1.5,0.9,4.4,1.4
+Large Group,Dinner,Wednesday,Spring,184,844.46,140.36,111,4.0,6.0,1.7,1.1,5.2,1.5
+Large Group,Dinner,Thursday,Fall,255,704.14,117.36,108,3.9,5.7,1.3,1.0,4.9,1.6
+Large Group,Dinner,Thursday,Winter,354,667.10,111.81,110,3.7,5.7,1.3,1.0,4.5,1.6
+Large Group,Dinner,Thursday,Summer,176,673.64,111.64,109,3.6,5.6,1.5,0.9,4.1,1.5
+Large Group,Dinner,Thursday,Spring,283,701.44,117.46,110,3.7,5.9,1.4,1.1,4.6,1.4
+Large Group,Dinner,Friday,Winter,430,688.04,113.97,113,3.7,5.8,1.3,1.2,4.3,1.5
+Large Group,Dinner,Friday,Fall,384,690.46,115.73,110,3.9,6.0,1.4,1.0,4.5,1.6
+Large Group,Dinner,Friday,Spring,361,691.58,117.65,111,3.7,5.8,1.4,1.1,4.2,1.5
+Large Group,Dinner,Friday,Summer,233,673.65,113.90,112,3.7,5.7,1.3,0.8,3.8,1.5
+Large Group,Dinner,Saturday,Summer,185,640.71,110.57,109,3.9,5.6,1.4,1.1,3.3,1.7
+Large Group,Dinner,Saturday,Winter,230,627.56,105.67,111,3.8,5.7,1.3,1.2,3.5,1.8
+Large Group,Dinner,Saturday,Fall,213,607.80,104.15,103,3.7,5.4,1.4,0.9,3.2,1.6
+Large Group,Dinner,Saturday,Spring,164,624.53,108.16,114,3.9,5.8,1.2,1.6,3.4,1.7
+Large Group,Lunch,Monday,Winter,74,568.23,93.44,84,4.0,5.1,1.2,0.5,2.1,2.9
+Large Group,Lunch,Monday,Summer,53,454.58,76.24,71,3.9,4.6,0.9,0.2,1.2,1.8
+Large Group,Lunch,Tuesday,Spring,60,517.64,81.73,79,4.2,4.7,1.3,0.5,1.5,2.7
+Large Group,Lunch,Tuesday,Fall,70,500.06,85.79,77,4.3,4.4,0.9,0.3,1.4,2.5
+Large Group,Lunch,Tuesday,Winter,78,503.51,85.01,84,3.9,4.5,0.8,0.5,1.7,2.3
+Large Group,Lunch,Tuesday,Summer,67,456.55,79.04,74,4.1,4.4,1.0,0.2,1.1,2.4
+Large Group,Lunch,Wednesday,Summer,74,491.72,81.77,74,4.1,4.7,1.1,0.4,1.5,2.2
+Large Group,Lunch,Wednesday,Winter,91,582.09,98.82,83,4.2,4.8,1.0,0.3,2.4,2.5
+Large Group,Lunch,Wednesday,Fall,68,523.91,91.82,79,4.0,4.7,1.3,0.5,1.7,2.6
+Large Group,Lunch,Thursday,Winter,52,629.12,104.19,96,4.3,5.3,1.3,0.6,4.5,2.5
+Party,Dinner,Sunday,Spring,51,2919.67,13.73,144,4.9,8.7,2.5,1.9,9.0,2.2
+Party,Dinner,Monday,Fall,72,3783.81,237.93,147,4.8,9.2,2.9,1.7,10.4,2.6
+Party,Dinner,Monday,Winter,73,4234.47,260.86,147,4.3,8.4,2.5,2.2,10.2,2.8
+Party,Dinner,Tuesday,Fall,88,4305.35,240.25,141,4.9,8.8,2.5,2.0,11.2,3.0
+Party,Dinner,Tuesday,Summer,59,3863.92,231.44,148,4.7,7.9,2.4,1.7,13.0,2.4
+Party,Dinner,Tuesday,Winter,96,4164.90,48.16,149,4.6,7.8,2.2,1.9,10.1,3.2
+Party,Dinner,Tuesday,Spring,69,5027.63,15.93,157,4.3,8.0,2.2,2.0,13.3,2.4
+Party,Dinner,Wednesday,Spring,59,3778.72,32.34,150,4.0,7.4,2.1,2.2,12.4,3.1
+Party,Dinner,Wednesday,Winter,66,6237.52,108.97,166,4.7,9.1,2.6,1.8,14.5,2.6
+Party,Dinner,Wednesday,Fall,54,5830.74,128.88,156,4.2,8.0,2.1,2.3,14.6,2.3
+Party,Dinner,Thursday,Winter,69,2384.81,107.69,138,4.5,7.8,2.4,1.8,9.4,2.8
+Party,Dinner,Thursday,Fall,58,1920.22,12.09,122,4.9,8.3,1.8,1.1,6.9,2.1
+Party,Dinner,Friday,Winter,75,1833.28,15.51,133,4.4,7.8,2.1,1.7,8.8,2.0
+Party,Dinner,Friday,Spring,54,1925.52,143.02,138,4.3,7.7,2.1,1.9,10.3,2.2
+Party,Dinner,Friday,Fall,74,1340.76,5.73,122,4.3,7.4,1.9,1.4,6.1,2.2
+Small Group,Brunch,Friday,Fall,151,276.50,80.14,72,3.0,3.2,0.5,0.3,1.5,1.2
+Small Group,Brunch,Friday,Winter,182,286.69,82.17,73,2.8,3.1,0.5,0.4,2.0,1.2
+Small Group,Brunch,Friday,Summer,76,254.76,73.90,65,2.8,3.2,0.5,0.2,1.5,1.2
+Small Group,Brunch,Friday,Spring,121,260.95,77.58,71,2.6,3.1,0.6,0.4,1.9,1.2
+Small Group,Brunch,Saturday,Summer,135,257.29,72.36,73,2.9,3.4,0.6,0.4,1.5,1.3
+Small Group,Brunch,Saturday,Winter,155,303.72,85.28,76,2.9,3.6,0.5,0.4,2.0,1.2
+Small Group,Brunch,Saturday,Fall,109,255.39,71.93,66,2.7,3.2,0.5,0.3,1.4,1.3
+Small Group,Brunch,Saturday,Spring,116,321.09,92.65,82,2.8,3.5,0.7,0.6,2.2,1.2
+Small Group,Dinner,Sunday,Summer,347,413.25,118.80,97,3.0,4.0,1.1,0.6,2.4,1.1
+Small Group,Dinner,Sunday,Fall,339,403.02,116.77,93,2.9,3.9,1.0,0.6,2.5,1.0
+Small Group,Dinner,Sunday,Winter,346,406.48,116.33,96,3.0,3.9,0.9,0.8,2.6,1.0
+Small Group,Dinner,Sunday,Spring,333,416.36,120.88,98,3.0,3.9,0.9,0.8,2.6,1.0
+Small Group,Dinner,Monday,Fall,347,436.88,126.12,98,3.1,4.0,1.0,0.7,2.8,1.0
+Small Group,Dinner,Monday,Winter,377,448.21,128.50,98,3.0,4.0,0.9,0.7,2.7,0.9
+Small Group,Dinner,Monday,Spring,310,440.81,127.23,96,3.2,4.2,0.9,0.7,2.9,0.8
+Small Group,Dinner,Monday,Summer,325,434.31,127.51,93,3.0,4.0,0.9,0.5,2.8,1.0
+Small Group,Dinner,Tuesday,Spring,346,443.50,127.98,94,3.0,3.9,1.0,0.7,2.8,1.0
+Small Group,Dinner,Tuesday,Winter,418,416.76,121.15,95,2.9,3.9,0.9,0.7,2.8,1.0
+Small Group,Dinner,Tuesday,Summer,348,435.08,127.02,94,2.9,3.9,1.0,0.6,2.7,0.9
+Small Group,Dinner,Tuesday,Fall,378,439.23,127.32,92,3.1,3.9,1.0,0.6,2.8,1.0
+Small Group,Dinner,Wednesday,Summer,413,403.78,115.32,89,2.9,3.9,1.0,0.5,2.7,1.0
+Small Group,Dinner,Wednesday,Winter,445,410.26,117.86,98,2.9,4.0,0.8,0.6,2.8,1.0
+Small Group,Dinner,Wednesday,Fall,404,447.03,129.09,96,3.0,3.9,1.1,0.6,2.9,1.0
+Small Group,Dinner,Wednesday,Spring,385,454.47,132.05,99,3.1,4.2,0.9,0.9,2.8,1.1
+Small Group,Dinner,Thursday,Summer,387,371.00,106.83,88,2.8,3.8,0.8,0.5,2.6,0.9
+Small Group,Dinner,Thursday,Winter,696,393.23,109.96,95,2.8,3.9,0.8,0.7,2.8,1.0
+Small Group,Dinner,Thursday,Fall,575,386.59,109.07,88,2.9,3.8,0.9,0.6,2.8,0.9
+Small Group,Dinner,Thursday,Spring,574,395.44,111.87,93,3.1,4.0,0.8,0.7,2.8,0.9
+Small Group,Dinner,Friday,Spring,650,386.13,108.79,95,3.0,3.8,0.9,0.8,2.7,0.9
+Small Group,Dinner,Friday,Winter,680,389.30,107.57,95,3.0,3.8,0.8,0.8,2.7,1.1
+Small Group,Dinner,Friday,Summer,547,395.08,110.65,93,2.9,4.0,0.9,0.6,2.5,1.0
+Small Group,Dinner,Friday,Fall,601,395.35,111.19,92,2.9,3.9,0.9,0.6,2.7,0.9
+Small Group,Dinner,Saturday,Fall,396,367.61,104.81,92,2.8,4.0,0.8,0.6,2.3,1.1
+Small Group,Dinner,Saturday,Spring,321,371.31,105.95,94,2.9,4.0,0.9,0.7,2.2,1.1
+Small Group,Dinner,Saturday,Winter,511,369.25,104.65,94,2.9,3.9,0.8,0.7,2.4,1.1
+Small Group,Dinner,Saturday,Summer,393,360.19,103.18,90,2.8,3.9,0.9,0.5,2.2,1.1
+Small Group,Lunch,Sunday,Fall,81,270.21,79.88,68,2.9,2.7,0.7,0.3,1.6,1.4
+Small Group,Lunch,Sunday,Summer,71,274.40,79.52,67,3.0,3.0,0.7,0.2,1.0,1.5
+Small Group,Lunch,Sunday,Winter,124,281.76,79.77,72,3.0,3.2,0.5,0.3,1.3,1.7
+Small Group,Lunch,Sunday,Spring,80,248.12,74.91,64,3.0,2.7,0.5,0.2,0.8,1.9
+Small Group,Lunch,Monday,Fall,124,282.62,82.07,68,3.1,3.2,0.5,0.3,1.2,1.8
+Small Group,Lunch,Monday,Spring,127,261.91,76.64,66,3.0,2.9,0.6,0.3,0.9,1.7
+Small Group,Lunch,Monday,Summer,112,270.97,78.83,67,3.0,2.9,0.5,0.2,0.9,1.8
+Small Group,Lunch,Monday,Winter,135,283.33,81.91,70,3.3,3.0,0.6,0.2,1.1,2.0
+Small Group,Lunch,Tuesday,Summer,132,274.13,79.01,67,3.3,2.8,0.6,0.1,1.1,1.7
+Small Group,Lunch,Tuesday,Fall,128,282.59,83.93,71,3.0,3.0,0.5,0.2,1.0,1.7
+Small Group,Lunch,Tuesday,Winter,178,281.12,81.50,71,2.9,2.9,0.6,0.2,1.0,1.8
+Small Group,Lunch,Tuesday,Spring,152,281.72,83.15,70,3.2,2.9,0.7,0.2,1.0,1.8
+Small Group,Lunch,Wednesday,Summer,108,265.70,78.62,69,2.9,3.1,0.6,0.3,1.2,1.3
+Small Group,Lunch,Wednesday,Winter,154,290.30,85.15,72,3.1,3.0,0.5,0.2,1.1,1.7
+Small Group,Lunch,Wednesday,Spring,117,291.17,85.81,69,3.1,3.1,0.6,0.2,1.2,1.8
+Small Group,Lunch,Wednesday,Fall,133,286.63,84.90,73,3.0,3.0,0.7,0.3,1.0,1.6
+Small Group,Lunch,Thursday,Winter,142,289.01,83.08,78,3.0,3.2,0.5,0.2,1.7,1.5
+Small Group,Lunch,Thursday,Summer,89,266.32,79.54,67,3.0,2.9,0.5,0.2,1.6,1.2
+Small Group,Lunch,Thursday,Fall,104,276.75,79.73,69,2.6,3.4,0.5,0.3,1.5,1.4
+Small Group,Lunch,Thursday,Spring,95,289.29,86.69,78,3.0,3.2,0.5,0.4,1.9,1.4
+Solo,Brunch,Friday,Summer,59,83.87,83.87,39,1.3,1.1,0.1,0.1,0.8,0.3
+Solo,Brunch,Friday,Fall,63,169.90,169.90,42,1.4,1.3,0.2,0.1,1.5,0.8
+Solo,Dinner,Sunday,Spring,151,124.34,124.34,52,1.3,1.3,0.2,0.2,1.5,0.2
+Solo,Dinner,Sunday,Winter,141,131.15,131.15,48,1.3,1.4,0.3,0.1,1.3,0.4
+Solo,Dinner,Sunday,Fall,162,188.87,188.87,51,1.4,1.7,0.3,0.1,1.5,0.2
+Solo,Dinner,Sunday,Summer,156,202.05,202.05,54,1.6,1.8,0.3,0.2,1.7,0.4
+Solo,Dinner,Monday,Summer,113,125.90,125.90,52,1.5,1.3,0.2,0.1,1.4,0.2
+Solo,Dinner,Monday,Winter,155,129.41,129.41,53,1.3,1.4,0.2,0.1,1.5,0.2
+Solo,Dinner,Monday,Fall,138,120.11,120.11,47,1.3,1.6,0.2,0.2,1.3,0.3
+Solo,Dinner,Monday,Spring,120,139.90,139.90,50,1.4,1.6,0.3,0.1,1.4,0.3
+Solo,Dinner,Tuesday,Winter,197,125.80,125.80,50,1.1,1.2,0.2,0.2,1.6,0.3
+Solo,Dinner,Tuesday,Summer,140,121.09,121.09,52,1.3,1.4,0.2,0.1,1.4,0.3
+Solo,Dinner,Tuesday,Fall,144,126.93,126.93,55,1.4,1.5,0.3,0.1,1.3,0.3
+Solo,Dinner,Tuesday,Spring,178,120.10,120.10,48,1.2,1.4,0.2,0.1,1.4,0.2
+Solo,Dinner,Wednesday,Summer,158,144.82,144.82,53,1.3,1.2,0.3,0.2,1.8,0.2
+Solo,Dinner,Wednesday,Winter,125,135.40,135.40,49,0.9,1.0,0.2,0.1,1.6,0.2
+Solo,Dinner,Wednesday,Spring,101,116.54,116.54,54,1.4,1.4,0.3,0.2,1.4,0.2
+Solo,Dinner,Wednesday,Fall,137,120.66,120.66,51,1.2,1.4,0.2,0.1,1.7,0.2
+Solo,Dinner,Thursday,Spring,156,141.60,141.60,54,1.4,1.4,0.3,0.1,1.6,0.2
+Solo,Dinner,Thursday,Winter,159,148.54,148.54,47,0.9,1.1,0.2,0.1,1.6,0.2
+Solo,Dinner,Thursday,Fall,176,130.35,130.35,51,1.2,1.3,0.3,0.1,1.8,0.2
+Solo,Dinner,Thursday,Summer,127,118.48,118.48,48,1.3,1.2,0.2,0.1,1.4,0.3
+Solo,Dinner,Friday,Spring,146,168.10,168.10,54,1.4,1.7,0.3,0.3,1.6,0.3
+Solo,Dinner,Friday,Winter,128,140.09,140.09,53,1.2,1.5,0.3,0.3,1.6,0.4
+Solo,Dinner,Friday,Fall,171,126.10,126.10,44,1.3,1.4,0.3,0.1,1.6,0.3
+Solo,Dinner,Friday,Summer,115,214.02,214.02,45,1.1,1.1,0.2,0.2,1.6,0.2
+Solo,Dinner,Saturday,Spring,114,143.11,143.11,56,1.4,1.7,0.3,0.2,1.0,0.3
+Solo,Dinner,Saturday,Fall,152,121.67,121.67,52,1.4,1.6,0.3,0.1,1.3,0.3
+Solo,Dinner,Saturday,Summer,151,119.45,119.45,48,1.3,1.5,0.3,0.1,1.3,0.3
+Solo,Dinner,Saturday,Winter,152,133.66,133.66,49,1.2,1.3,0.3,0.2,1.6,0.3
+Solo,Lunch,Tuesday,Spring,52,95.49,95.49,41,1.4,1.5,0.3,0.0,0.6,0.5
+Solo,Lunch,Thursday,Spring,54,90.88,90.88,51,1.5,1.4,0.2,0.1,1.0,0.4
+Solo,Lunch,Thursday,Fall,53,102.12,102.12,51,1.4,1.5,0.2,0.2,0.8,0.5
