@@ -1,0 +1,208 @@
+{
+  "from_date": "2025-11-11",
+  "to_date": "2025-11-11",
+  "extracted_on": "2026-02-16T06:27:58Z",
+  "extraction_duration": 28.45,
+  "menu_items_summary": [
+    {
+      "Menu Item": "Open Liquor Paramount Buyout 11.11.25",
+      "Menu Group": "Open Liquor",
+      "Menu": "No Menu",
+      "Item Qty": "10",
+      "Net Amount": "$39,000.00"
+    },
+    {
+      "Menu Item": "Open Food Paramount Buyout 11.11.25 300pp",
+      "Menu Group": "Open Food",
+      "Menu": "No Menu",
+      "Item Qty": "10",
+      "Net Amount": "$91,000.00"
+    },
+    {
+      "Menu Item": "Ope Food Paramount Buyout 11.11.25",
+      "Menu Group": "Open Food",
+      "Menu": "No Menu",
+      "Item Qty": "0",
+      "Net Amount": "$0.00"
+    },
+    {
+      "Menu Item": "Open Food Paramount Buyout 11.11.25",
+      "Menu Group": "Open Food",
+      "Menu": "No Menu",
+      "Item Qty": "0",
+      "Net Amount": "$0.00"
+    }
+  ],
+  "checks": [
+    {
+      "payment_id": "200000062058404005",
+      "metadata": {
+        "payment_id": "200000062058404005",
+        "Order #": "2",
+        "Source": "In Store",
+        "Revenue Center": "Banquets"
+      },
+      "complete": true,
+      "attempts": 1,
+      "last_error": null,
+      "extracted_at": "2026-02-16T06:27:45.175748+00:00",
+      "data": {
+        "check_number": 2,
+        "time_opened": "11/11/25, 11:30 PM",
+        "guest_count": null,
+        "server": "Bartender DOWNSTAIRS PM",
+        "table": "1",
+        "tab_name": "Paramount Buyout 11.11.25",
+        "discount": 0.0,
+        "discounts": [],
+        "subtotal": 136500.0,
+        "tax": 12114.38,
+        "tip": 0.0,
+        "gratuity": 26000.0,
+        "total": 174614.38,
+        "revenue_center": "Banquets",
+        "items": [
+          {
+            "item_name": "Open Food Paramount Buyout 11.11.25 300pp",
+            "modifiers": null,
+            "quantity": 9.0,
+            "unit_price": 10000.0,
+            "discount": 0.0,
+            "line_total": 90000.0,
+            "line_tax": 7987.5,
+            "line_total_with_tax": 97987.5,
+            "voided": true,
+            "reason": null
+          },
+          {
+            "item_name": "Ope Food Paramount Buyout 11.11.25",
+            "modifiers": null,
+            "quantity": 1.0,
+            "unit_price": 4300.0,
+            "discount": 0.0,
+            "line_total": 4300.0,
+            "line_tax": 381.63,
+            "line_total_with_tax": 4681.63,
+            "voided": true,
+            "reason": null
+          },
+          {
+            "item_name": "Open Liquor Paramount Buyout 11.11.25",
+            "modifiers": null,
+            "quantity": 10.0,
+            "unit_price": 3900.0,
+            "discount": 0.0,
+            "line_total": 39000.0,
+            "line_tax": 3461.25,
+            "line_total_with_tax": 42461.25,
+            "voided": false,
+            "reason": null
+          },
+          {
+            "item_name": "Open Liquor Paramount Buyout 11.11.25",
+            "modifiers": null,
+            "quantity": 1.0,
+            "unit_price": 1800.0,
+            "discount": 0.0,
+            "line_total": 1800.0,
+            "line_tax": 159.75,
+            "line_total_with_tax": 1959.75,
+            "voided": true,
+            "reason": null
+          },
+          {
+            "item_name": "Open Food Paramount Buyout 11.11.25",
+            "modifiers": null,
+            "quantity": 1.0,
+            "unit_price": 5200.0,
+            "discount": 0.0,
+            "line_total": 5200.0,
+            "line_tax": 461.5,
+            "line_total_with_tax": 5661.5,
+            "voided": true,
+            "reason": null
+          },
+          {
+            "item_name": "Open Food Paramount Buyout 11.11.25 300pp",
+            "modifiers": null,
+            "quantity": 10.0,
+            "unit_price": 9100.0,
+            "discount": 0.0,
+            "line_total": 91000.0,
+            "line_tax": 8076.25,
+            "line_total_with_tax": 99076.25,
+            "voided": false,
+            "reason": null
+          },
+          {
+            "item_name": "Open Food Paramount Buyout 11.11.25",
+            "modifiers": null,
+            "quantity": 1.0,
+            "unit_price": 4000.0,
+            "discount": 0.0,
+            "line_total": 4000.0,
+            "line_tax": 355.0,
+            "line_total_with_tax": 4355.0,
+            "voided": true,
+            "reason": null
+          },
+          {
+            "item_name": "Open Liquor Paramount Buyout 11.11.25",
+            "modifiers": null,
+            "quantity": 1.0,
+            "unit_price": 1714.29,
+            "discount": 0.0,
+            "line_total": 1714.29,
+            "line_tax": 152.14,
+            "line_total_with_tax": 1866.43,
+            "voided": true,
+            "reason": null
+          }
+        ],
+        "payments": [
+          {
+            "payment_type": "OTHER: Banquet Deposit Redeem",
+            "payment_date": "11/11/25, 11:45 PM",
+            "amount": 53193.78,
+            "tip": 0.0,
+            "gratuity": 9306.22,
+            "total": 62500.0,
+            "refund": 0.0,
+            "status": "VOIDED",
+            "card_type": "200000062058404005",
+            "card_last_4": null
+          },
+          {
+            "payment_type": "OTHER: Banquet Deposit Redeem",
+            "payment_date": "11/12/25, 12:03 AM",
+            "amount": 53193.78,
+            "tip": 0.0,
+            "gratuity": 9306.22,
+            "total": 62500.0,
+            "refund": 0.0,
+            "status": "CAPTURED",
+            "card_type": null,
+            "card_last_4": null
+          },
+          {
+            "payment_type": "House Account House Account 1",
+            "payment_date": "11/12/25, 12:04 AM",
+            "amount": 95420.6,
+            "tip": 0.0,
+            "gratuity": 16693.78,
+            "total": 112114.38,
+            "refund": 0.0,
+            "status": "AUTHORIZED",
+            "card_type": null,
+            "card_last_4": null
+          }
+        ],
+        "complete": true,
+        "time_closed": "11/11/25, 11:45 PM",
+        "turnover_time": 15.0,
+        "validation_errors": []
+      },
+      "parsed_url": "https://www.toasttab.com/restaurants/admin/reports/home#check-200000062058404005"
+    }
+  ]
+}

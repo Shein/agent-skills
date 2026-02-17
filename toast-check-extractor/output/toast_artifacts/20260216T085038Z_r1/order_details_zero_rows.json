@@ -1,0 +1,69 @@
+{
+  "url": "https://www.toasttab.com/restaurants/admin/reports/home#sales-order-details",
+  "title": "Sales Reports",
+  "blocks": 0,
+  "tables": [
+    {
+      "id": "",
+      "cls": " table-condensed",
+      "headers": [
+        "February 2026",
+        "Su",
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa"
+      ],
+      "rows": 6
+    },
+    {
+      "id": "",
+      "cls": "table-condensed",
+      "headers": [
+        "2026"
+      ],
+      "rows": 1
+    },
+    {
+      "id": "",
+      "cls": "table-condensed",
+      "headers": [
+        "2020-2029"
+      ],
+      "rows": 1
+    },
+    {
+      "id": "",
+      "cls": " table-condensed",
+      "headers": [
+        "February 2026",
+        "Su",
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa"
+      ],
+      "rows": 6
+    },
+    {
+      "id": "",
+      "cls": "table-condensed",
+      "headers": [
+        "2026"
+      ],
+      "rows": 1
+    },
+    {
+      "id": "",
+      "cls": "table-condensed",
+      "headers": [
+        "2020-2029"
+      ],
+      "rows": 1
+    }
+  ]
+}

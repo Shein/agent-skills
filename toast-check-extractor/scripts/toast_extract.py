@@ -370,6 +370,11 @@ def parse_args() -> argparse.Namespace:
         default=700,
         help="Minimum spacing between starting each order-detail navigation across workers (milliseconds).",
     )
+    parser.add_argument(
+        "--combined-output",
+        default="",
+        help="Path for combined JSON output (checks + menu summary). If set, writes the combined format.",
+    )
     return parser.parse_args()
 
 
@@ -452,6 +457,30 @@ def save_menu_summary(path: Path, rows: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
     tmp.write_text(json.dumps(rows, indent=2), encoding="utf-8")
+    tmp.replace(path)
+
+
+def save_combined_output(
+    path: Path,
+    *,
+    from_date: str,
+    to_date: str,
+    extracted_on: str,
+    extraction_duration: float,
+    menu_items_summary: list[dict[str, Any]],
+    checks: list[dict[str, Any]],
+) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "from_date": from_date,
+        "to_date": to_date,
+        "extracted_on": extracted_on,
+        "extraction_duration": extraction_duration,
+        "menu_items_summary": menu_items_summary,
+        "checks": checks,
+    }
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(payload, indent=2), encoding="utf-8")
     tmp.replace(path)
 
 
@@ -1000,11 +1029,39 @@ async def wait_for_order_detail_blocks_ready(page: Page, config: dict[str, Any],
         await asyncio.sleep(0.5)
 
 
+async def get_pagination_summary(page: Page) -> dict[str, int]:
+    """Read the LAST .pagination-summary span and parse 'Showing x through y of z'.
+
+    Returns ``{"start": x, "end": y, "total": z}`` or an empty dict when the
+    element is absent or the text doesn't match the expected pattern.
+    """
+    try:
+        info = await page.evaluate(
+            """() => {
+                const spans = Array.from(document.querySelectorAll('.pagination-summary'));
+                if (!spans.length) return null;
+                const last = spans[spans.length - 1];
+                const text = (last.textContent || '').trim();
+                const m = text.match(/Showing\\s+(\\d+)\\s+through\\s+(\\d+)\\s+of\\s+(\\d+)/i);
+                if (!m) return null;
+                return { start: parseInt(m[1], 10), end: parseInt(m[2], 10), total: parseInt(m[3], 10) };
+            }"""
+        )
+        return info if isinstance(info, dict) else {}
+    except Exception:
+        return {}
+
+
 async def click_next_order_details_page(page: Page, config: dict[str, Any]) -> bool:
-    selectors = config.get("order_details", {}).get("order_next_button", [])
+    """Click 'Next' in the LAST .pagination div on the page.
+
+    The order-details page contains multiple ``.pagination`` divs (the first
+    ones belong to the menu-item-summary table).  We always target the last
+    one so that we paginate the *orders* table.
+    """
     try:
         clicked = await page.evaluate(
-            """(candidateSelectors) => {
+            """() => {
                 const isVisible = (el) => {
                     if (!el) return false;
                     const r = el.getBoundingClientRect();
@@ -1014,30 +1071,54 @@ async def click_next_order_details_page(page: Page, config: dict[str, Any]) -> b
                     if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') return false;
                     return true;
                 };
-                for (const selector of candidateSelectors || []) {
-                    const nodes = Array.from(document.querySelectorAll(selector));
-                    for (const node of nodes) {
-                        if (!isVisible(node)) continue;
-                        const ariaDisabled = (node.getAttribute('aria-disabled') || '').toLowerCase() === 'true';
-                        const disabledAttr = node.getAttribute('disabled') != null;
-                        const className = (node.getAttribute('class') || '').toLowerCase();
-                        const parentClass = (node.parentElement?.getAttribute('class') || '').toLowerCase();
-                        if (ariaDisabled || disabledAttr) continue;
-                        if (className.includes('disabled') || parentClass.includes('disabled')) continue;
-                        node.click();
-                        return true;
-                    }
-                }
-                return false;
-            }""",
-            selectors,
+                const paginationDivs = Array.from(document.querySelectorAll('.pagination'));
+                if (!paginationDivs.length) return false;
+                const lastPagination = paginationDivs[paginationDivs.length - 1];
+                const nextLi = lastPagination.querySelector('li.next');
+                if (!nextLi) return false;
+                const className = (nextLi.getAttribute('class') || '').toLowerCase();
+                if (className.includes('disabled')) return false;
+                const anchor = nextLi.querySelector('a');
+                if (!anchor || !isVisible(anchor)) return false;
+                anchor.click();
+                return true;
+            }"""
         )
-        if clicked:
-            await page.wait_for_timeout(900)
-            return True
+        return bool(clicked)
     except Exception:
         pass
     return False
+
+
+async def wait_for_pagination_change(
+    page: Page,
+    old_summary: dict[str, int],
+    timeout_sec: int = 30,
+) -> dict[str, int]:
+    """Poll until the pagination-summary text changes from *old_summary*.
+
+    After clicking 'Next', Toast replaces the order-detail blocks
+    asynchronously.  This helper watches the LAST ``.pagination-summary``
+    span until its ``start``/``end`` values differ from *old_summary*,
+    indicating the new page has loaded.
+
+    Returns the new summary dict, or the old one on timeout.
+    """
+    deadline = asyncio.get_event_loop().time() + max(1, timeout_sec)
+    while asyncio.get_event_loop().time() < deadline:
+        await asyncio.sleep(0.5)
+        # Also wait for loading spinners to clear.
+        await wait_for_order_details_idle(page, timeout_sec=5)
+        new_summary = await get_pagination_summary(page)
+        if not new_summary:
+            continue
+        # The page has changed when start or end differs.
+        if (
+            new_summary.get("start") != old_summary.get("start")
+            or new_summary.get("end") != old_summary.get("end")
+        ):
+            return new_summary
+    return old_summary
 
 
 async def extract_order_detail_blocks(page: Page, config: dict[str, Any]) -> list[dict[str, Any]]:
@@ -1104,6 +1185,22 @@ async def extract_order_detail_blocks(page: Page, config: dict[str, Any]) -> lis
                     total: byClassText(".check-total"),
                 };
 
+                // Fallback: extract tip/total/gratuity from <b> label divs
+                // when CSS class selectors return empty.
+                if (!summary.tip || !summary.total || !summary.gratuity) {
+                    for (const bold of Array.from(order.querySelectorAll("div.span2 b"))) {
+                        const label = normalize(bold.textContent).replace(/:$/, "").toLowerCase();
+                        const parentDiv = bold.closest("div.span2");
+                        const siblingDiv = parentDiv ? parentDiv.nextElementSibling : null;
+                        if (!siblingDiv) continue;
+                        const val = normalize(siblingDiv.textContent);
+                        if (!val) continue;
+                        if (label === "tip" && !summary.tip) summary.tip = val;
+                        if (label === "total" && !summary.total) summary.total = val;
+                        if (label === "gratuity" && !summary.gratuity) summary.gratuity = val;
+                    }
+                }
+
                 const summaryDetails = {};
                 const detailsBlock = order.querySelector(".check-server-details");
                 if (detailsBlock) {
@@ -1143,6 +1240,7 @@ async def extract_order_detail_blocks(page: Page, config: dict[str, Any]) -> lis
                         summaryDetails.server = byLabel["opened by server"];
                     }
                     if (byLabel["table"]) summaryDetails.table = byLabel["table"];
+                    if (byLabel["tab name"]) summaryDetails.tab_name = byLabel["tab name"];
                     if (!summaryDetails.time_opened && lines.length > 0) {
                         summaryDetails.time_opened = lines[0];
                     }
@@ -2261,12 +2359,17 @@ async def crawl_metadata(
                 break
             page_signatures.add(signature)
 
+        # Read the pagination summary *after* extracting the current page so
+        # we can detect when the next page has finished loading.
+        current_summary = await get_pagination_summary(page)
+
         log_event(
             "order_details_page_fetched",
             page=page_count,
             rows=len(raw_rows),
             accepted=len(all_rows),
             page_added=page_added,
+            pagination=current_summary or None,
         )
 
         if limit and len(all_rows) >= limit:
@@ -2284,13 +2387,59 @@ async def crawl_metadata(
             break
         if not raw_rows:
             break
+
+        # Check whether there are more pages via the pagination summary.
+        if current_summary:
+            if current_summary.get("end", 0) >= current_summary.get("total", 0):
+                log_event(
+                    "order_details_pagination_complete",
+                    page=page_count,
+                    collected=len(all_rows),
+                    total=current_summary.get("total"),
+                )
+                break
+
         if not await click_next_order_details_page(page, config):
             break
+
+        # Wait for the DOM to reflect the new page data instead of relying on
+        # a fixed timeout.  The pagination-summary text will change once the
+        # server response is rendered.
+        if current_summary:
+            await wait_for_pagination_change(page, current_summary, timeout_sec=30)
+        else:
+            # Fallback: no summary available, use heuristic idle wait.
+            await human_pause(
+                page,
+                min_ms=max(400, human_min_delay_ms),
+                max_ms=max(1200, human_max_delay_ms),
+                label="order_details_page_pause",
+            )
+            await wait_for_order_details_idle(page, timeout_sec=15)
+
         await human_pause(
             page,
             min_ms=max(400, human_min_delay_ms),
             max_ms=max(1200, human_max_delay_ms),
             label="order_details_page_pause",
+        )
+
+    # Final verification: compare collected checks against the pagination total.
+    final_summary = await get_pagination_summary(page)
+    expected_total = final_summary.get("total", 0) if final_summary else 0
+    collected = len(all_rows)
+    if expected_total and collected != expected_total:
+        log_event(
+            "order_details_pagination_mismatch",
+            collected=collected,
+            expected=expected_total,
+            pagination=final_summary,
+        )
+    elif expected_total:
+        log_event(
+            "order_details_pagination_verified",
+            collected=collected,
+            expected=expected_total,
         )
 
     return all_rows
@@ -2337,6 +2486,14 @@ def normalize_payment_type(value: Any) -> str | None:
     if "cash" in lowered:
         return "cash"
     return text
+
+
+_INACTIVE_PAYMENT_STATUSES = frozenset({"DENIED", "VOIDED", "CANCELLED"})
+
+
+def _is_active_payment(payment: dict[str, Any]) -> bool:
+    status = (payment.get("status") or "").strip().upper()
+    return status not in _INACTIVE_PAYMENT_STATUSES
 
 
 DATETIME_INPUT_FORMATS: tuple[str, ...] = (
@@ -2690,16 +2847,38 @@ def validate_detail_payload(mapped: dict[str, Any]) -> list[str]:
     gratuity = parse_decimal(mapped.get("gratuity"))
     discount = parse_decimal(mapped.get("discount")) or 0.0
     total = parse_decimal(mapped.get("total"))
+    items = mapped.get("items") or []
+    payments = mapped.get("payments") or []
 
-    if subtotal is not None and tax is not None and tip is not None and gratuity is not None and total is not None:
-        expected = round(subtotal + tax + tip + gratuity - discount, 2)
-        if abs(expected - total) > 0.05:
-            errors.append(
-                f"total_mismatch: expected={expected:.2f} actual={total:.2f} "
-                f"(subtotal={subtotal:.2f}, tax={tax:.2f}, tip={tip:.2f}, gratuity={gratuity:.2f}, discount={discount:.2f})"
+    # Total formula: subtotal is already post-discount, so do NOT subtract discount again.
+    # Skip for comped checks where total=0 but subtotal/tip/gratuity>0 (pre-comp payment capture).
+    is_comped = (total is not None and abs(total) < 0.005
+                 and ((subtotal is not None and subtotal > 0.5)
+                      or (tip is not None and tip > 0.5)
+                      or (gratuity is not None and gratuity > 0.5)))
+    if not is_comped:
+        if subtotal is not None and tax is not None and tip is not None and gratuity is not None and total is not None:
+            expected = round(subtotal + tax + tip + gratuity, 2)
+            if abs(expected - total) > 0.05:
+                errors.append(
+                    f"total_mismatch: expected={expected:.2f} actual={total:.2f} "
+                    f"(subtotal={subtotal:.2f}, tax={tax:.2f}, tip={tip:.2f}, gratuity={gratuity:.2f})"
+                )
+
+    # Tip verification: sum of non-DENIED payment tips should match check-level tip.
+    if tip is not None and payments:
+        non_denied = [p for p in payments if _is_active_payment(p)]
+        if non_denied:
+            payment_tips = round(
+                sum(parse_decimal(p.get("tip")) or 0.0 for p in non_denied), 2
             )
+            if abs(payment_tips - tip) > 0.05:
+                errors.append(
+                    f"tip_mismatch: payment_tips={payment_tips:.2f} tip={tip:.2f}"
+                )
 
-    for idx, item in enumerate(mapped.get("items") or []):
+    # Per-item line total validation.
+    for idx, item in enumerate(items):
         quantity = parse_decimal(item.get("quantity"))
         unit_price = parse_decimal(item.get("unit_price"))
         line_total = parse_decimal(item.get("line_total"))
@@ -2820,7 +2999,11 @@ def map_detail_payload(
 
     tip = parse_decimal(summary.get("tip"))
     if tip is None and payments:
-        tip_values = [parse_decimal(payment.get("tip")) for payment in payments]
+        tip_values = [
+            parse_decimal(p.get("tip"))
+            for p in payments
+            if _is_active_payment(p)
+        ]
         tip_numbers = [value for value in tip_values if value is not None]
         if tip_numbers:
             tip = round(sum(tip_numbers), 2)
@@ -2831,7 +3014,11 @@ def map_detail_payload(
 
     gratuity = parse_decimal(summary.get("gratuity"))
     if gratuity is None and payments:
-        gratuity_values = [parse_decimal(payment.get("gratuity")) for payment in payments]
+        gratuity_values = [
+            parse_decimal(p.get("gratuity"))
+            for p in payments
+            if _is_active_payment(p)
+        ]
         gratuity_numbers = [value for value in gratuity_values if value is not None]
         if gratuity_numbers:
             gratuity = round(sum(gratuity_numbers), 2)
@@ -2846,12 +3033,20 @@ def map_detail_payload(
     if total is None:
         total = parse_decimal(pick_metadata_value(metadata, ["total"]))
     if total is None and payments:
-        payment_totals = [parse_decimal(payment.get("total")) for payment in payments]
+        payment_totals = [
+            parse_decimal(p.get("total"))
+            for p in payments
+            if _is_active_payment(p)
+        ]
         payment_total_numbers = [value for value in payment_totals if value is not None]
         if payment_total_numbers:
             total = round(sum(payment_total_numbers), 2)
     if total is None and payments:
-        amount_values = [parse_decimal(payment.get("amount")) for payment in payments]
+        amount_values = [
+            parse_decimal(p.get("amount"))
+            for p in payments
+            if _is_active_payment(p)
+        ]
         amount_numbers = [value for value in amount_values if value is not None]
         if amount_numbers:
             tip_component = tip or 0.0
@@ -2904,6 +3099,7 @@ def map_detail_payload(
             or regex_server
         ),
         "table": pick_value(pairs, ["table", "tab"]) or summary_details.get("table") or regex_table,
+        "tab_name": summary_details.get("tab_name") or pick_value(pairs, ["tab name"]),
         "discount": discount,
         "discounts": discounts_table,
         "subtotal": subtotal,
@@ -3053,6 +3249,22 @@ async def extract_detail_payload(
                 total: byClassText(".check-total"),
             };
 
+            // Fallback: extract tip/total/gratuity from <b> label divs
+            // when CSS class selectors return empty.
+            if (!summary.tip || !summary.total || !summary.gratuity) {
+                for (const bold of Array.from(document.querySelectorAll("div.span2 b"))) {
+                    const label = (bold.textContent || "").trim().replace(/:$/, "").toLowerCase();
+                    const parentDiv = bold.closest("div.span2");
+                    const siblingDiv = parentDiv ? parentDiv.nextElementSibling : null;
+                    if (!siblingDiv) continue;
+                    const val = (siblingDiv.textContent || "").trim();
+                    if (!val) continue;
+                    if (label === "tip" && !summary.tip) summary.tip = val;
+                    if (label === "total" && !summary.total) summary.total = val;
+                    if (label === "gratuity" && !summary.gratuity) summary.gratuity = val;
+                }
+            }
+
             const summaryDetails = {};
             const detailsBlock = document.querySelector(".check-server-details");
             if (detailsBlock) {
@@ -3060,9 +3272,44 @@ async def extract_detail_payload(
                     .split(/\\n+/)
                     .map((line) => line.trim())
                     .filter(Boolean);
-                if (lines.length > 0) summaryDetails.time_opened = lines[0];
-                if (lines.length > 1) summaryDetails.server = lines[1];
-                if (lines.length > 4) summaryDetails.table = lines[lines.length - 2];
+                // Label-based parsing for server details
+                const labelBlock = detailsBlock.previousElementSibling;
+                const labels = [];
+                if (labelBlock) {
+                    for (const el of Array.from(labelBlock.querySelectorAll("b"))) {
+                        const label = (el.textContent || "").trim().replace(/:$/, "").toLowerCase();
+                        if (label) labels.push(label);
+                    }
+                }
+                const byLabel = {};
+                let labelIndex = 0;
+                let lastLabel = "";
+                for (const line of lines) {
+                    const isContinuation = line.startsWith("(") && lastLabel;
+                    if (isContinuation) {
+                        byLabel[lastLabel] = `${byLabel[lastLabel]} ${line}`.trim();
+                        continue;
+                    }
+                    if (labelIndex < labels.length) {
+                        const label = labels[labelIndex];
+                        byLabel[label] = line;
+                        lastLabel = label;
+                        labelIndex += 1;
+                    } else if (lastLabel) {
+                        byLabel[lastLabel] = `${byLabel[lastLabel]} ${line}`.trim();
+                    }
+                }
+                if (byLabel["time opened"]) summaryDetails.time_opened = byLabel["time opened"];
+                if (byLabel["server"]) summaryDetails.server = byLabel["server"];
+                if (!summaryDetails.server && byLabel["opened by server"]) {
+                    summaryDetails.server = byLabel["opened by server"];
+                }
+                if (byLabel["table"]) summaryDetails.table = byLabel["table"];
+                if (byLabel["tab name"]) summaryDetails.tab_name = byLabel["tab name"];
+                // Positional fallbacks
+                if (!summaryDetails.time_opened && lines.length > 0) summaryDetails.time_opened = lines[0];
+                if (!summaryDetails.server && lines.length > 1) summaryDetails.server = lines[1];
+                if (!summaryDetails.table && lines.length > 4) summaryDetails.table = lines[lines.length - 2];
             }
 
             const guestInput = document.querySelector("#num-guests");
@@ -3309,6 +3556,7 @@ async def run_once(
     error_log_path = Path(args.error_log_file)
     artifact_dir = Path(args.artifact_dir) / run_id
     artifact_dir.mkdir(parents=True, exist_ok=True)
+    _run_start_time = datetime.now(timezone.utc)
     log_event("run_start", run_id=run_id, state_file=str(state_path))
     save_progress(progress_path, state, run_id)
 
@@ -3409,6 +3657,24 @@ async def run_once(
         completed = sum(1 for row in state.values() if row.get("complete"))
         incomplete = len(state) - completed
         save_progress(progress_path, state, run_id)
+
+        if args.combined_output:
+            _run_end_time = datetime.now(timezone.utc)
+            _duration = (_run_end_time - _run_start_time).total_seconds()
+            checks_list = sorted(state.values(), key=lambda row: row["payment_id"])
+            menu_rows: list[dict[str, Any]] = []
+            if menu_summary_path.exists():
+                menu_rows = json.loads(menu_summary_path.read_text(encoding="utf-8"))
+            save_combined_output(
+                Path(args.combined_output),
+                from_date=args.start_date or "",
+                to_date=args.end_date or "",
+                extracted_on=_run_end_time.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                extraction_duration=round(_duration, 2),
+                menu_items_summary=menu_rows,
+                checks=checks_list,
+            )
+
         log_event("run_complete", run_id=run_id, total=len(state), complete=completed, incomplete=incomplete)
         await context.close()
 

@@ -40,6 +40,9 @@ env/
 *.log
 *.jsonl
 
+# === Large database dumps ===
+*_db_dump.sql
+
 # === Misc ===
 *.tmp
 *.bak

@@ -211,226 +211,37 @@ def export_to_json(payload: dict[str, Any], output_path: Path) -> None:
     output_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
 
-def ensure_sql_schema(conn: Any) -> None:
-    with conn.cursor() as cur:
-        cur.execute(
-            """
-            CREATE TABLE IF NOT EXISTS toast_checks (
-                payment_id TEXT PRIMARY KEY,
-                complete BOOLEAN NOT NULL,
-                attempts INTEGER NOT NULL,
-                last_error TEXT,
-                extracted_at TIMESTAMPTZ,
-                parsed_url TEXT,
-                check_number INTEGER,
-                time_opened TEXT,
-                guest_count INTEGER,
-                server_name TEXT,
-                table_name TEXT,
-                discount NUMERIC,
-                subtotal NUMERIC,
-                tax NUMERIC,
-                tip NUMERIC,
-                gratuity NUMERIC,
-                total NUMERIC,
-                revenue_center TEXT,
-                metadata JSONB NOT NULL,
-                data JSONB,
-                updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-            )
-            """
-        )
-        cur.execute(
-            """
-            CREATE TABLE IF NOT EXISTS toast_check_items (
-                payment_id TEXT NOT NULL,
-                item_index INTEGER NOT NULL,
-                item_name TEXT,
-                quantity NUMERIC,
-                unit_price NUMERIC,
-                line_total NUMERIC,
-                line_total_with_tax NUMERIC,
-                row_data JSONB NOT NULL,
-                PRIMARY KEY (payment_id, item_index)
-            )
-            """
-        )
-        cur.execute(
-            """
-            CREATE TABLE IF NOT EXISTS toast_check_payments (
-                payment_id TEXT NOT NULL,
-                payment_index INTEGER NOT NULL,
-                payment_type TEXT,
-                amount NUMERIC,
-                tip NUMERIC,
-                total NUMERIC,
-                card_type TEXT,
-                card_last_4 TEXT,
-                row_data JSONB NOT NULL,
-                PRIMARY KEY (payment_id, payment_index)
-            )
-            """
-        )
-        cur.execute(
-            """
-            CREATE TABLE IF NOT EXISTS toast_menu_item_summary (
-                start_date DATE NOT NULL,
-                end_date DATE NOT NULL,
-                row_index INTEGER NOT NULL,
-                row_data JSONB NOT NULL,
-                extracted_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-                PRIMARY KEY (start_date, end_date, row_index)
-            )
-            """
-        )
-    conn.commit()
-
-
 def export_to_sql(payload: dict[str, Any], database_url: str) -> None:
+    """Load extracted data into the analytics database using the new schema.
+
+    Uses loader.load_daily_file under the hood. The payload is written to a
+    temporary file and loaded as a daily file for consistency with the ETL
+    pipeline.
+    """
     try:
         import psycopg
     except ImportError as exc:
         raise ConfigError("psycopg is required for SQL output. Install dependencies first.") from exc
 
+    import tempfile
+    from schema import create_schema
+    from loader import load_daily_file
+
     with psycopg.connect(database_url) as conn:
-        ensure_sql_schema(conn)
-        with conn.cursor() as cur:
-            for record in payload["checks"]:
-                payment_id = str(record.get("payment_id") or "").strip()
-                if not payment_id:
-                    continue
-                data = record.get("data") or {}
-                metadata = record.get("metadata") or {}
-                cur.execute(
-                    """
-                    INSERT INTO toast_checks (
-                        payment_id, complete, attempts, last_error, extracted_at, parsed_url,
-                        check_number, time_opened, guest_count, server_name, table_name,
-                        discount, subtotal, tax, tip, gratuity, total, revenue_center,
-                        metadata, data, updated_at
-                    )
-                    VALUES (
-                        %(payment_id)s, %(complete)s, %(attempts)s, %(last_error)s, %(extracted_at)s,
-                        %(parsed_url)s, %(check_number)s, %(time_opened)s, %(guest_count)s,
-                        %(server_name)s, %(table_name)s, %(discount)s, %(subtotal)s, %(tax)s,
-                        %(tip)s, %(gratuity)s, %(total)s, %(revenue_center)s,
-                        %(metadata)s::jsonb, %(data)s::jsonb, NOW()
-                    )
-                    ON CONFLICT (payment_id) DO UPDATE SET
-                        complete = EXCLUDED.complete,
-                        attempts = EXCLUDED.attempts,
-                        last_error = EXCLUDED.last_error,
-                        extracted_at = EXCLUDED.extracted_at,
-                        parsed_url = EXCLUDED.parsed_url,
-                        check_number = EXCLUDED.check_number,
-                        time_opened = EXCLUDED.time_opened,
-                        guest_count = EXCLUDED.guest_count,
-                        server_name = EXCLUDED.server_name,
-                        table_name = EXCLUDED.table_name,
-                        discount = EXCLUDED.discount,
-                        subtotal = EXCLUDED.subtotal,
-                        tax = EXCLUDED.tax,
-                        tip = EXCLUDED.tip,
-                        gratuity = EXCLUDED.gratuity,
-                        total = EXCLUDED.total,
-                        revenue_center = EXCLUDED.revenue_center,
-                        metadata = EXCLUDED.metadata,
-                        data = EXCLUDED.data,
-                        updated_at = NOW()
-                    """,
-                    {
-                        "payment_id": payment_id,
-                        "complete": bool(record.get("complete")),
-                        "attempts": int(record.get("attempts") or 0),
-                        "last_error": record.get("last_error"),
-                        "extracted_at": record.get("extracted_at"),
-                        "parsed_url": record.get("parsed_url"),
-                        "check_number": data.get("check_number"),
-                        "time_opened": data.get("time_opened"),
-                        "guest_count": data.get("guest_count"),
-                        "server_name": data.get("server"),
-                        "table_name": data.get("table"),
-                        "discount": data.get("discount"),
-                        "subtotal": data.get("subtotal"),
-                        "tax": data.get("tax"),
-                        "tip": data.get("tip"),
-                        "gratuity": data.get("gratuity"),
-                        "total": data.get("total"),
-                        "revenue_center": data.get("revenue_center"),
-                        "metadata": json.dumps(metadata),
-                        "data": json.dumps(data),
-                    },
-                )
+        create_schema(conn)
 
-                cur.execute("DELETE FROM toast_check_items WHERE payment_id = %s", (payment_id,))
-                items = data.get("items") or []
-                for item_index, item in enumerate(items):
-                    cur.execute(
-                        """
-                        INSERT INTO toast_check_items (
-                            payment_id, item_index, item_name, quantity, unit_price,
-                            line_total, line_total_with_tax, row_data
-                        )
-                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s::jsonb)
-                        """,
-                        (
-                            payment_id,
-                            item_index,
-                            item.get("item_name"),
-                            item.get("quantity"),
-                            item.get("unit_price"),
-                            item.get("line_total"),
-                            item.get("line_total_with_tax"),
-                            json.dumps(item),
-                        ),
-                    )
+        # Write payload to a temp file that load_daily_file can process
+        start_date = payload["date_range"]["start_date"]
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=f"_{start_date}.json", delete=False, encoding="utf-8",
+        ) as tmp:
+            json.dump(payload, tmp, indent=2)
+            tmp_path = Path(tmp.name)
 
-                cur.execute("DELETE FROM toast_check_payments WHERE payment_id = %s", (payment_id,))
-                payments = data.get("payments") or []
-                for payment_index, payment in enumerate(payments):
-                    cur.execute(
-                        """
-                        INSERT INTO toast_check_payments (
-                            payment_id, payment_index, payment_type, amount, tip,
-                            total, card_type, card_last_4, row_data
-                        )
-                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s::jsonb)
-                        """,
-                        (
-                            payment_id,
-                            payment_index,
-                            payment.get("payment_type"),
-                            payment.get("amount"),
-                            payment.get("tip"),
-                            payment.get("total"),
-                            payment.get("card_type"),
-                            payment.get("card_last_4"),
-                            json.dumps(payment),
-                        ),
-                    )
-
-            cur.execute(
-                "DELETE FROM toast_menu_item_summary WHERE start_date = %s AND end_date = %s",
-                (payload["date_range"]["start_date"], payload["date_range"]["end_date"]),
-            )
-            for row_index, row in enumerate(payload.get("menu_item_summary") or []):
-                cur.execute(
-                    """
-                    INSERT INTO toast_menu_item_summary (start_date, end_date, row_index, row_data)
-                    VALUES (%s, %s, %s, %s::jsonb)
-                    ON CONFLICT (start_date, end_date, row_index) DO UPDATE SET
-                        row_data = EXCLUDED.row_data,
-                        extracted_at = NOW()
-                    """,
-                    (
-                        payload["date_range"]["start_date"],
-                        payload["date_range"]["end_date"],
-                        row_index,
-                        json.dumps(row),
-                    ),
-                )
-
-        conn.commit()
+        try:
+            load_daily_file(conn, tmp_path, restaurant_name="Quality Italian")
+        finally:
+            tmp_path.unlink(missing_ok=True)
 
 
 def add_run_arguments(parser: argparse.ArgumentParser) -> None:
