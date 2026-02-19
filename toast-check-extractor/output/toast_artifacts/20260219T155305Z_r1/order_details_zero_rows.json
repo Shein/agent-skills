@@ -1,0 +1,143 @@
+{
+  "url": "https://www.toasttab.com/restaurants/admin/reports/home#sales-order-details",
+  "title": "Sales Reports",
+  "blocks": 0,
+  "tables": [
+    {
+      "id": "orders-report",
+      "cls": "table table-striped",
+      "headers": [
+        "Order Id",
+        "Order #",
+        "Checks",
+        "Opened",
+        "# of Guests",
+        "Tab Names",
+        "Server",
+        "Table",
+        "Revenue Center",
+        "Dining Area",
+        "Service",
+        "Dining Options"
+      ],
+      "rows": 0
+    },
+    {
+      "id": "payments-report",
+      "cls": "table table-bordered table-striped",
+      "headers": [
+        "Payment Id",
+        "Order Id",
+        "PMS Sync Status",
+        "Order #",
+        "Paid Date",
+        "Order Date",
+        "Check Id",
+        "Check #",
+        "Tab Name",
+        "Server",
+        "Table",
+        "Dining Area"
+      ],
+      "rows": 0
+    },
+    {
+      "id": "closed-shifts-report",
+      "cls": "table table-bordered table-striped",
+      "headers": [
+        "Employee",
+        "Job Title",
+        "In Date",
+        "Shift Closed Date",
+        "Out Date",
+        "Hours",
+        "Cash Tips Decl.",
+        "Cash on Hand",
+        "Cash in Drawer",
+        "Non-Cash Tips",
+        "Cash Gratuity",
+        "Non-Cash Gratuity"
+      ],
+      "rows": 0
+    },
+    {
+      "id": "cash-mgmt-report",
+      "cls": "table table-bordered table-striped",
+      "headers": [
+        "Entry Id",
+        "Created Date",
+        "Action",
+        "Amount",
+        "Cash Drawer",
+        "Payout Reason",
+        "No Sale Reason",
+        "Comment",
+        "Employee",
+        "Employee 2"
+      ],
+      "rows": 0
+    },
+    {
+      "id": "",
+      "cls": " table-condensed",
+      "headers": [
+        "December 2025",
+        "Su",
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa"
+      ],
+      "rows": 6
+    },
+    {
+      "id": "",
+      "cls": "table-condensed",
+      "headers": [
+        "2025"
+      ],
+      "rows": 1
+    },
+    {
+      "id": "",
+      "cls": "table-condensed",
+      "headers": [
+        "2020-2029"
+      ],
+      "rows": 1
+    },
+    {
+      "id": "",
+      "cls": " table-condensed",
+      "headers": [
+        "December 2025",
+        "Su",
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr",
+        "Sa"
+      ],
+      "rows": 6
+    },
+    {
+      "id": "",
+      "cls": "table-condensed",
+      "headers": [
+        "2025"
+      ],
+      "rows": 1
+    },
+    {
+      "id": "",
+      "cls": "table-condensed",
+      "headers": [
+        "2020-2029"
+      ],
+      "rows": 1
+    }
+  ]
+}
